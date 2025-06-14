@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://chpjcepdpwo1h"]
+
+[ext_resource type="Script" uid="uid://rrmytnw58rbh" path="res://scripts/graph_node.gd" id="1_xy06m"]
+[ext_resource type="Script" uid="uid://643fnedidpi8" path="res://scripts/sub_node_textEdit.gd" id="2_i4cx1"]
+[ext_resource type="Script" uid="uid://c4kxlir1hn111" path="res://scripts/remove_sub_node.gd" id="3_mbwkg"]
+
+[node name="GraphNode" type="GraphNode"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -89.0
+offset_right = 116.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_filter = 1
+position_offset = Vector2(485, 219)
+resizable = true
+ignore_invalid_connection_type = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(0.956863, 1, 0.905882, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("1_xy06m")
+
+[node name="AddSubNodeButton" type="Button" parent="."]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "+"
+
+[node name="SubnodeHBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+
+[node name="SubNode" type="TextEdit" parent="SubnodeHBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Write your topic"
+scroll_fit_content_height = true
+scroll_fit_content_width = true
+caret_blink = true
+caret_blink_interval = 0.35
+caret_mid_grapheme = true
+script = ExtResource("2_i4cx1")
+
+[node name="RemoveSubNodeButton" type="Button" parent="SubnodeHBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "-"
+script = ExtResource("3_mbwkg")
+
+[connection signal="pressed" from="AddSubNodeButton" to="." method="_on_add_sub_node_button_pressed"]
+[connection signal="pressed" from="SubnodeHBoxContainer/RemoveSubNodeButton" to="SubnodeHBoxContainer/RemoveSubNodeButton" method="_on_pressed"]

@@ -1,0 +1,164 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=33 format=3 uid="uid://c4xs7hgdycmtj"]
+
+[ext_resource type="Script" uid="uid://bcgs7ln5nl7pw" path="res://resource scripts/graphNode_data.gd" id="1_pj063"]
+[ext_resource type="Script" uid="uid://bruwfpos5lah5" path="res://resource scripts/subNode_data.gd" id="2_rwadp"]
+[ext_resource type="Script" uid="uid://eqrnpbebcyhu" path="res://resource scripts/graph_data.gd" id="3_fq7nm"]
+
+[sub_resource type="Resource" id="Resource_pj063"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_rwadp"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_fq7nm"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_h3gfq"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_861e6"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_g0v1d"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_pfu1r"]
+script = ExtResource("1_pj063")
+name = "_GraphNode_272"
+offset = Vector2(764.444, 110)
+subNodes = [SubResource("Resource_pj063"), SubResource("Resource_rwadp"), SubResource("Resource_fq7nm"), SubResource("Resource_h3gfq"), SubResource("Resource_861e6"), SubResource("Resource_g0v1d")]
+
+[sub_resource type="Resource" id="Resource_aomnu"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_egu6w"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_mjgo0"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_mk84v"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_d61mf"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_tqgxp"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_ilsu5"]
+script = ExtResource("1_pj063")
+name = "_GraphNode_339"
+offset = Vector2(1104.44, 1.11114)
+subNodes = [SubResource("Resource_aomnu"), SubResource("Resource_egu6w"), SubResource("Resource_mjgo0"), SubResource("Resource_mk84v"), SubResource("Resource_d61mf"), SubResource("Resource_tqgxp")]
+
+[sub_resource type="Resource" id="Resource_e02tj"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_h6ral"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_v4dfk"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_fwtan"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_ur88f"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_w4714"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_aj11n"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_cqka7"]
+script = ExtResource("1_pj063")
+name = "GraphNode"
+offset = Vector2(414.444, 245.139)
+subNodes = [SubResource("Resource_e02tj"), SubResource("Resource_h6ral"), SubResource("Resource_v4dfk"), SubResource("Resource_fwtan"), SubResource("Resource_ur88f"), SubResource("Resource_w4714"), SubResource("Resource_aj11n")]
+
+[sub_resource type="Resource" id="Resource_rgh3e"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_d32ar"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_8t08f"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_nbhqt"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_7ug7h"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_e5ri1"]
+script = ExtResource("2_rwadp")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_6a5am"]
+script = ExtResource("1_pj063")
+name = "_GraphNode_351"
+offset = Vector2(1103.36, 385.968)
+subNodes = [SubResource("Resource_rgh3e"), SubResource("Resource_d32ar"), SubResource("Resource_8t08f"), SubResource("Resource_nbhqt"), SubResource("Resource_7ug7h"), SubResource("Resource_e5ri1")]
+
+[resource]
+script = ExtResource("3_fq7nm")
+connections = [{
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_272",
+"to_port": 1
+}, {
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_272",
+"to_port": 2
+}, {
+"from_node": &"_GraphNode_272",
+"from_port": 2,
+"keep_alive": false,
+"to_node": &"_GraphNode_339",
+"to_port": 1
+}, {
+"from_node": &"_GraphNode_272",
+"from_port": 2,
+"keep_alive": false,
+"to_node": &"_GraphNode_351",
+"to_port": 3
+}, {
+"from_node": &"_GraphNode_272",
+"from_port": 2,
+"keep_alive": false,
+"to_node": &"_GraphNode_351",
+"to_port": 5
+}]
+graphNodes = [SubResource("Resource_pfu1r"), SubResource("Resource_ilsu5"), SubResource("Resource_cqka7"), SubResource("Resource_6a5am")]
