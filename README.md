@@ -2,6 +2,9 @@
 
 ![](https://img.shields.io/badge/License-MIT-blue) ![](https://img.shields.io/badge/release-v0.1.0.0_alpha-blue
 )
+
+![flow-maker](https://github.com/user-attachments/assets/977da041-c41c-4f41-8165-c5322498a473)
+
 > [!IMPORTANT]
 > This tool is still in pre release. There are a lot of bugs, issues. The app may occasionally break. The save system might not work correctly some time. Please report those issues. Thank you.
 
