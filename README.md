@@ -3,16 +3,18 @@
 
 ![](https://img.shields.io/badge/License-MIT-blue) ![](https://img.shields.io/badge/release-v0.1.0.0_alpha-blue)
 ![](https://img.shields.io/badge/Godot-v4.4.stable.official-blue)
-![flow-maker](https://github.com/user-attachments/assets/977da041-c41c-4f41-8165-c5322498a473)
+![flow-maker](https://github.com/user-attachments/assets/b1a22739-cd89-45e7-a9f8-3beba84a22cd)
+
 
 > [!IMPORTANT]
 > This tool is still in pre release. There are a lot of bugs, issues. The app may occasionally break. The save system might not work correctly some time. Please report those issues. Thank you.
 
-A simple tool to make flow charts, graphs, roadmaps etc. Now build flow charts with just clicks and for free.
+A simple tool to generate flow charts, graphs, roadmaps etc. Now build flow charts with just clicks and for free. Or create your roadmap and share it with the community. Or maybe 
+make a to-do list. Or maybe plan you next move. There are limitless possibilities.
 
 ### DOWNLOAD
 
-Download the app from [here](https://github.com/IsaacAneek/flow-maker/releases "here"). No configuration needed. Just download and start using it. Currently only supports windows_x64. Planning to release ports as well.
+Download the app from [here](https://github.com/IsaacAneek/flow-maker/releases "here"). No configuration needed. Just download and start using it. Currently only supports Windows x32 and x64. Planning to release ports as well.
 
 ### CONTRIBUTE
 
