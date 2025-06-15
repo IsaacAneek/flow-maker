@@ -1,5 +1,6 @@
 extends GraphEdit
 var selected_nodes = {}
+#@export_range(0.0, 1.0, 0.1) var amount: float
 
 func _input(event: InputEvent) -> void:
 	if event is InputEvent:
@@ -17,11 +18,15 @@ func _input(event: InputEvent) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	zoom = 0.80
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	#for con in connections:
+	#	set_connection_activity(con.from_node, con.from_port, con.to_node, con.to_port, amount)
 
 
 func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
@@ -46,3 +51,17 @@ func _on_node_deselected(node: Node) -> void:
 
 func _on_delete_nodes_request(nodes: Array[StringName]) -> void:
 	print("node delete")
+
+func clear_graph() -> void:
+	for node in get_children():
+	# First remove all connections
+		if node is GraphNode:
+			for connectionInfo in connections:
+				if connectionInfo.from_node == node.name or connectionInfo.to_node == node.name:
+					disconnect_node(connectionInfo.from_node, connectionInfo.from_port, connectionInfo.to_node, connectionInfo.to_port)
+			node.queue_free()
+	print("deleted all node")
+
+
+func _on_control_2d_clear_graph() -> void:
+	clear_graph()

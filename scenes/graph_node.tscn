@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://chpjcepdpwo1h"]
+[gd_scene load_steps=3 format=3 uid="uid://chpjcepdpwo1h"]
 
 [ext_resource type="Script" uid="uid://rrmytnw58rbh" path="res://scripts/graph_node.gd" id="1_xy06m"]
-[ext_resource type="Script" uid="uid://643fnedidpi8" path="res://scripts/sub_node_textEdit.gd" id="2_i4cx1"]
-[ext_resource type="Script" uid="uid://c4kxlir1hn111" path="res://scripts/remove_sub_node.gd" id="3_mbwkg"]
+[ext_resource type="PackedScene" uid="uid://dssp6cu8jkbip" path="res://scenes/subnode_h_box_container.tscn" id="2_xa3py"]
 
 [node name="GraphNode" type="GraphNode"]
 anchors_preset = 8
@@ -47,28 +46,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 text = "+"
 
-[node name="SubnodeHBoxContainer" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(0, 37)
+[node name="SubnodeHBoxContainer" parent="." instance=ExtResource("2_xa3py")]
 layout_mode = 2
-
-[node name="SubNode" type="TextEdit" parent="SubnodeHBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-placeholder_text = "Write your topic"
-scroll_fit_content_height = true
-scroll_fit_content_width = true
-caret_blink = true
-caret_blink_interval = 0.35
-caret_mid_grapheme = true
-script = ExtResource("2_i4cx1")
-
-[node name="RemoveSubNodeButton" type="Button" parent="SubnodeHBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-text = "-"
-script = ExtResource("3_mbwkg")
 
 [connection signal="pressed" from="AddSubNodeButton" to="." method="_on_add_sub_node_button_pressed"]
-[connection signal="pressed" from="SubnodeHBoxContainer/RemoveSubNodeButton" to="SubnodeHBoxContainer/RemoveSubNodeButton" method="_on_pressed"]

@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=35 format=3 uid="uid://du7hqtwwqg5mp"]
+[gd_resource type="Theme" load_steps=41 format=3 uid="uid://du7hqtwwqg5mp"]
 
 [ext_resource type="Texture2D" uid="uid://bxyk0lrscb48d" path="res://assets/blank.png" id="1_qa2gg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vv2u3"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_gq8cl"]
 font_names = PackedStringArray("Arial")
@@ -9,13 +12,28 @@ multichannel_signed_distance_field = true
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa2gg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7xdp"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+border_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmp0m"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
 bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+border_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rngj7"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
 bg_color = Color(0.0781565, 0.0781564, 0.0781564, 1)
+border_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_65g2t"]
 font_names = PackedStringArray("Arial")
@@ -28,8 +46,12 @@ expand_margin_top = 35.0
 expand_margin_right = 7.0
 expand_margin_bottom = 7.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fo3ay"]
-bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvg3t"]
+bg_color = Color(0.171637, 0.171637, 0.171637, 1)
+expand_margin_left = 7.0
+expand_margin_top = 35.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5wri"]
 bg_color = Color(0.113725, 0.113725, 0.113725, 1)
@@ -64,6 +86,15 @@ bg_color = Color(1, 0.74182, 0.807496, 1)
 bg_color = Color(0.868985, 0.868985, 0.868985, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8c6fy"]
+
+[sub_resource type="SystemFont" id="SystemFont_vv2u3"]
+font_names = PackedStringArray("Arial")
+multichannel_signed_distance_field = true
+
+[sub_resource type="SystemFont" id="SystemFont_wvg3t"]
+font_names = PackedStringArray("Arial")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vv2u3"]
 
 [sub_resource type="SystemFont" id="SystemFont_5ey58"]
 font_names = PackedStringArray("Arial")
@@ -125,6 +156,11 @@ border_width_right = 6
 border_width_bottom = 6
 border_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
+[sub_resource type="SystemFont" id="SystemFont_2s6v7"]
+font_names = PackedStringArray("Arial")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bckfj"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqrvx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mmvr"]
@@ -133,7 +169,7 @@ bg_color = Color(0.851769, 0.851769, 0.851769, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4juu"]
 
 [resource]
-Button/font_sizes/font_size = 22
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_vv2u3")
 Button/fonts/font = SubResource("SystemFont_gq8cl")
 Button/styles/focus = SubResource("StyleBoxEmpty_qa2gg")
 Button/styles/hover = SubResource("StyleBoxFlat_p7xdp")
@@ -143,8 +179,9 @@ FileDialog/constants/buttons_min_width = 90
 FileDialog/constants/buttons_separation = 0
 FileDialog/fonts/title_font = SubResource("SystemFont_65g2t")
 FileDialog/styles/embedded_border = SubResource("StyleBoxFlat_6ov4b")
-FileDialog/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_fo3ay")
+FileDialog/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_wvg3t")
 FileDialog/styles/panel = SubResource("StyleBoxFlat_j5wri")
+GraphEdit/colors/activity = Color(0.842763, 0.512436, 0, 1)
 GraphEdit/styles/menu_panel = SubResource("StyleBoxFlat_gq8cl")
 GraphEdit/styles/panel = SubResource("StyleBoxFlat_65g2t")
 GraphNode/constants/separation = 0
@@ -157,6 +194,10 @@ GraphNode/styles/titlebar_selected = SubResource("StyleBoxFlat_qa2gg")
 HScrollBar/styles/grabber = SubResource("StyleBoxFlat_js3th")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_6q7es")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_8c6fy")
+Label/font_sizes/font_size = 16
+Label/fonts/font = SubResource("SystemFont_vv2u3")
+LineEdit/fonts/font = SubResource("SystemFont_wvg3t")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_vv2u3")
 MenuBar/font_sizes/font_size = 14
 MenuBar/fonts/font = SubResource("SystemFont_5ey58")
 MenuBar/styles/hover = SubResource("StyleBoxFlat_rhsnk")
@@ -176,6 +217,8 @@ TextEdit/font_sizes/font_size = 18
 TextEdit/fonts/font = SubResource("SystemFont_b4tno")
 TextEdit/styles/focus = SubResource("StyleBoxFlat_ig1tx")
 TextEdit/styles/normal = SubResource("StyleBoxFlat_wngtg")
+Tree/fonts/font = SubResource("SystemFont_2s6v7")
+Tree/styles/focus = SubResource("StyleBoxEmpty_bckfj")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_pqrvx")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_0mmvr")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_f4juu")

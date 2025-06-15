@@ -2,6 +2,7 @@ extends GraphNode
 @export var duplicated_graph_node: Control
 @export var initial_pos_offset = Vector2(20.0, 20.0)
 @export var SlotCount = 2
+const SUBNODE_H_BOX_CONTAINER = preload("res://scenes/subnode_h_box_container.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _input(event: InputEvent) -> void:
@@ -32,7 +33,7 @@ func _process(delta: float) -> void:
 
 
 func _on_add_sub_node_button_pressed() -> void:
-	add_child(get_child(-1).duplicate())
+	add_child(SUBNODE_H_BOX_CONTAINER.instantiate())
 	SlotCount += 1
 	set_slot(SlotCount - 1, true, 0, Color(1, 1, 1, 1), true, 0, Color(1, 1, 1, 1))
 

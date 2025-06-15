@@ -1,4 +1,6 @@
 extends Control
+
+signal clear_graph
 @export var Graph_Edit: GraphEdit
 @onready var save_file_dialog: FileDialog = $SaveFileDialog
 @onready var open_file_dialog: FileDialog = $OpenFileDialog
@@ -9,7 +11,7 @@ enum FileMenuOptions {
 	NEW_GRAPH,
 	CREATE_NODE,
 	CREATE_HEAD_NODE,
-	#SAVE_AS_RESOURCE
+	#SAVE_AS_JSON
 	SAVE_AS_RESOURCE,
 }
 
@@ -19,7 +21,9 @@ enum OpenMenuPopup {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+	#RenderingServer.set_debug_generate_wireframes(true)
+	#get_viewport().debug_draw = Viewport.DEBUG_DRAW_WIREFRAME
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,6 +61,7 @@ func init_graph(Graph_Data: GraphData):
 		
 		var slotIndex = 2
 		for sub_node_data in g_node_data.subNodes:
+			# Init first node as the HEAD node (TODO)
 			var s_node = GRAPH_NODE.get_child(1).duplicate()
 			s_node.get_child(0).text = sub_node_data.topic
 			GRAPH_NODE.set_slot(slotIndex, true, 0, Color(1, 1, 1, 1), true, 0, Color(1, 1, 1, 1))
@@ -97,6 +102,8 @@ func create_node() -> void:
 
 func _on_file_menu_popup_id_pressed(id: int) -> void:
 	match id:
+		FileMenuOptions.NEW_GRAPH:
+			emit_signal("clear_graph")
 		FileMenuOptions.CREATE_HEAD_NODE:
 			create_head_node()
 		FileMenuOptions.CREATE_NODE:
@@ -118,4 +125,8 @@ func _on_save_file_dialog_file_selected(path: String) -> void:
 
 
 func _on_open_file_dialog_file_selected(path: String) -> void:
-	load_graph_as_resource(path)
+	emit_signal("clear_graph")
+	# Need to call this at the end of the frame to avoid colliding with clear_graph() function
+	# Might cause bugs need to kept observed
+	call_deferred("load_graph_as_resource", path)
+	#load_graph_as_resource(path)

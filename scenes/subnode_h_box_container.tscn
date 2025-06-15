@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dssp6cu8jkbip"]
+
+[ext_resource type="Script" uid="uid://643fnedidpi8" path="res://scripts/sub_node_textEdit.gd" id="1_47teh"]
+[ext_resource type="Script" uid="uid://c4kxlir1hn111" path="res://scripts/remove_sub_node.gd" id="2_tkyhe"]
+
+[node name="SubnodeHBoxContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 37)
+
+[node name="SubNode" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Write your topic"
+scroll_fit_content_height = true
+scroll_fit_content_width = true
+caret_blink = true
+caret_blink_interval = 0.35
+caret_mid_grapheme = true
+script = ExtResource("1_47teh")
+
+[node name="RemoveSubNodeButton" type="Button" parent="."]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "-"
+script = ExtResource("2_tkyhe")
+
+[connection signal="pressed" from="RemoveSubNodeButton" to="RemoveSubNodeButton" method="_on_pressed"]
