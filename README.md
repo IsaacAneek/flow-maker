@@ -9,8 +9,7 @@
 > [!IMPORTANT]
 > This tool is still in pre release. There are a lot of bugs, issues. The app may occasionally break. The save system might not work correctly some time. Please report those issues. Thank you.
 
-A simple tool to generate flow charts, graphs, roadmaps etc. Now build flow charts with just clicks and for free. Or create your roadmap and share it with the community. Or maybe 
-make a to-do list. Or maybe plan you next move. There are limitless possibilities.
+A simple tool to make flow charts, roadmaps, graphs or any kind of diagrams with ease. Now build flow charts with just clicks and for free. You can create your roadmap and share it with the community. Or maybe make a to-do list. Or maybe plan your next move. There are limitless possibilities.
 
 ### DOWNLOAD
 
