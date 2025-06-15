@@ -1,8 +1,8 @@
+![flow_maker_icon](https://github.com/user-attachments/assets/fca96865-3b5c-4275-ab4e-b4e278011f38) 
 # FLOW MAKER
 
-![](https://img.shields.io/badge/License-MIT-blue) ![](https://img.shields.io/badge/release-v0.1.0.0_alpha-blue
-)
-
+![](https://img.shields.io/badge/License-MIT-blue) ![](https://img.shields.io/badge/release-v0.1.0.0_alpha-blue)
+![](https://img.shields.io/badge/Godot-v4.4.stable.official-blue)
 ![flow-maker](https://github.com/user-attachments/assets/977da041-c41c-4f41-8165-c5322498a473)
 
 > [!IMPORTANT]
