@@ -11,6 +11,11 @@
 
 A simple tool to make flow charts, roadmaps, graphs or any kind of diagrams with ease. Now build flow charts with just clicks and for free. You can create your roadmap and share it with the community. Or maybe make a to-do list. Or maybe plan your next move. There are limitless possibilities.
 
+> [!WARNING]
+> The load/save currently doesnt work perfectly. There are a lot bugs/glitches.
+> So it is advised that the users save their progress by taking screenshots or records or any other medium.
+> We will try to resolve it as soon as possible.
+
 ## DOWNLOAD
 
 Download the app from [here](https://github.com/IsaacAneek/flow-maker/releases "here"). No configuration needed. Just download and start using it. Currently only supports Windows x32 and x64. Planning to release ports as well.
