@@ -1,0 +1,326 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=52 format=3]
+
+[ext_resource type="Script" path="res://resource_scripts/graphNode_data.gd" id="1_cyjsb"]
+[ext_resource type="Script" path="res://resource_scripts/subNode_data.gd" id="2_head7"]
+[ext_resource type="Script" path="res://resource_scripts/graph_data.gd" id="3_vavaj"]
+
+[sub_resource type="Resource" id="Resource_cyjsb"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_head7"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_vavaj"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_ajmar"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_x4dk7"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_66sml"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_bpspn"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_461"
+offset = Vector2(1440, 160)
+subNodes = [SubResource("Resource_cyjsb"), SubResource("Resource_head7"), SubResource("Resource_vavaj"), SubResource("Resource_ajmar"), SubResource("Resource_x4dk7"), SubResource("Resource_66sml")]
+
+[sub_resource type="Resource" id="Resource_q0lsx"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_b06d0"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_75elo"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_8x58m"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_ygds6"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_y1kh8"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_vrifi"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_wk5gb"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_2owvr"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_sok11"]
+script = ExtResource("2_head7")
+topic = ""
+
+[sub_resource type="Resource" id="Resource_cdndp"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_415"
+offset = Vector2(1440, 520)
+subNodes = [SubResource("Resource_q0lsx"), SubResource("Resource_b06d0"), SubResource("Resource_75elo"), SubResource("Resource_8x58m"), SubResource("Resource_ygds6"), SubResource("Resource_y1kh8"), SubResource("Resource_vrifi"), SubResource("Resource_wk5gb"), SubResource("Resource_2owvr"), SubResource("Resource_sok11")]
+
+[sub_resource type="Resource" id="Resource_hfmtw"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_nvphy"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_xs14f"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_76y7b"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_qegkt"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_378"
+offset = Vector2(1120, 20)
+subNodes = [SubResource("Resource_hfmtw"), SubResource("Resource_nvphy"), SubResource("Resource_xs14f"), SubResource("Resource_76y7b")]
+
+[sub_resource type="Resource" id="Resource_8cubk"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_rbi3x"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_6cv8d"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_cektj"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_lerau"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_358"
+offset = Vector2(1120, 400)
+subNodes = [SubResource("Resource_8cubk"), SubResource("Resource_rbi3x"), SubResource("Resource_6cv8d"), SubResource("Resource_cektj")]
+
+[sub_resource type="Resource" id="Resource_7tpyg"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_vq26w"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_7btuh"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_asujk"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_duwpq"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_413"
+offset = Vector2(820, 361.75)
+subNodes = [SubResource("Resource_7tpyg"), SubResource("Resource_vq26w"), SubResource("Resource_7btuh"), SubResource("Resource_asujk")]
+
+[sub_resource type="Resource" id="Resource_8ahee"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_anomv"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_yo7ll"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_h8g6i"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_5tu0u"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_330"
+offset = Vector2(811.947, 23.8949)
+subNodes = [SubResource("Resource_8ahee"), SubResource("Resource_anomv"), SubResource("Resource_yo7ll"), SubResource("Resource_h8g6i")]
+
+[sub_resource type="Resource" id="Resource_bx4y0"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_h4le0"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_kt5g5"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_864mf"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_3h5ga"]
+script = ExtResource("1_cyjsb")
+name = "_GraphNode_438"
+offset = Vector2(1440, -120)
+subNodes = [SubResource("Resource_bx4y0"), SubResource("Resource_h4le0"), SubResource("Resource_kt5g5"), SubResource("Resource_864mf")]
+
+[sub_resource type="Resource" id="Resource_q7lrg"]
+script = ExtResource("2_head7")
+topic = "adasd"
+
+[sub_resource type="Resource" id="Resource_yhfxe"]
+script = ExtResource("2_head7")
+topic = "zzxc"
+
+[sub_resource type="Resource" id="Resource_s1weq"]
+script = ExtResource("2_head7")
+topic = "czxc"
+
+[sub_resource type="Resource" id="Resource_abrj6"]
+script = ExtResource("2_head7")
+topic = "zxcfff"
+
+[sub_resource type="Resource" id="Resource_t2sdt"]
+script = ExtResource("1_cyjsb")
+name = "GraphNode"
+offset = Vector2(480, 200)
+subNodes = [SubResource("Resource_q7lrg"), SubResource("Resource_yhfxe"), SubResource("Resource_s1weq"), SubResource("Resource_abrj6")]
+
+[resource]
+script = ExtResource("3_vavaj")
+connections = Array[Dictionary]([{
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_330",
+"to_port": 0
+}, {
+"from_node": &"_GraphNode_330",
+"from_port": 1,
+"keep_alive": false,
+"to_node": &"_GraphNode_378",
+"to_port": 0
+}, {
+"from_node": &"_GraphNode_330",
+"from_port": 1,
+"keep_alive": false,
+"to_node": &"_GraphNode_358",
+"to_port": 0
+}, {
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_358",
+"to_port": 2
+}, {
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_413",
+"to_port": 1
+}, {
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_413",
+"to_port": 3
+}, {
+"from_node": &"_GraphNode_413",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_358",
+"to_port": 0
+}, {
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_358",
+"to_port": 1
+}, {
+"from_node": &"_GraphNode_413",
+"from_port": 1,
+"keep_alive": false,
+"to_node": &"_GraphNode_358",
+"to_port": 2
+}, {
+"from_node": &"_GraphNode_413",
+"from_port": 3,
+"keep_alive": false,
+"to_node": &"_GraphNode_378",
+"to_port": 0
+}, {
+"from_node": &"GraphNode",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_413",
+"to_port": 2
+}, {
+"from_node": &"_GraphNode_358",
+"from_port": 2,
+"keep_alive": false,
+"to_node": &"_GraphNode_415",
+"to_port": 6
+}, {
+"from_node": &"_GraphNode_358",
+"from_port": 2,
+"keep_alive": false,
+"to_node": &"_GraphNode_415",
+"to_port": 0
+}, {
+"from_node": &"_GraphNode_358",
+"from_port": 2,
+"keep_alive": false,
+"to_node": &"_GraphNode_461",
+"to_port": 3
+}, {
+"from_node": &"_GraphNode_378",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_438",
+"to_port": 0
+}, {
+"from_node": &"_GraphNode_378",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_438",
+"to_port": 3
+}, {
+"from_node": &"_GraphNode_358",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_438",
+"to_port": 0
+}, {
+"from_node": &"_GraphNode_358",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"_GraphNode_461",
+"to_port": 3
+}])
+graphNodes = [SubResource("Resource_bpspn"), SubResource("Resource_cdndp"), SubResource("Resource_qegkt"), SubResource("Resource_lerau"), SubResource("Resource_duwpq"), SubResource("Resource_5tu0u"), SubResource("Resource_3h5ga"), SubResource("Resource_t2sdt")]

@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://chpjcepdpwo1h"]
+[gd_scene load_steps=2 format=3 uid="uid://chpjcepdpwo1h"]
 
 [ext_resource type="Script" uid="uid://rrmytnw58rbh" path="res://scripts/graph_node.gd" id="1_xy06m"]
-[ext_resource type="PackedScene" uid="uid://dssp6cu8jkbip" path="res://scenes/subnode_h_box_container.tscn" id="2_xa3py"]
 
-[node name="GraphNode" type="GraphNode"]
+[node name="_graph_node" type="GraphNode"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -20,7 +19,7 @@ mouse_filter = 1
 position_offset = Vector2(485, 219)
 resizable = true
 ignore_invalid_connection_type = true
-slot/0/left_enabled = false
+slot/0/left_enabled = true
 slot/0/left_type = 0
 slot/0/left_color = Color(0.956863, 1, 0.905882, 1)
 slot/0/left_icon = null
@@ -29,15 +28,6 @@ slot/0/right_type = 0
 slot/0/right_color = Color(1, 1, 1, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
-slot/1/left_enabled = true
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = true
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
 script = ExtResource("1_xy06m")
 
 [node name="AddSubNodeButton" type="Button" parent="."]
@@ -45,8 +35,5 @@ custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 text = "+"
-
-[node name="SubnodeHBoxContainer" parent="." instance=ExtResource("2_xa3py")]
-layout_mode = 2
 
 [connection signal="pressed" from="AddSubNodeButton" to="." method="_on_add_sub_node_button_pressed"]
