@@ -59,7 +59,9 @@ func save_graph_as_resource(filename: String) -> void:
 	else:
 		print("save failed")
 
-# Extract graph data from the loaded resource file
+## Extract graph data from the loaded resource file
+# WARNING : I/O bound function. Takes up a huge amount of frame time in low-end devices.
+# Make this async?
 func init_graph(Graph_Data: GraphData):
 	for g_node_data in Graph_Data.graphNodes:
 		var graph_node = GRAPH_NODE.instantiate() as GraphNode

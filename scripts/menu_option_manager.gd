@@ -31,6 +31,7 @@ func _process(delta: float) -> void:
 func _on_file_menu_popup_id_pressed(id: int) -> void:
 	match id:
 		FileMenuOptions.NEW_GRAPH:
+			last_selected_path = ""
 			Graph_Edit.clear_graph()
 		FileMenuOptions.CREATE_HEAD_NODE:
 			Graph_Edit.create_head_node()
