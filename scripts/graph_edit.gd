@@ -43,7 +43,7 @@ func save_graph_as_resource(filename: String) -> void:
 	for graphNode in get_children():
 		if graphNode is GraphNode:
 			var GRAPH_NODE_data = GraphNodeData.new()
-			GRAPH_NODE_data.name = graphNode.name
+			GRAPH_NODE_data.name = graphNode.name.validate_node_name()
 			GRAPH_NODE_data.offset = graphNode.position_offset
 			
 			for subNode in graphNode.get_children():
@@ -59,7 +59,7 @@ func save_graph_as_resource(filename: String) -> void:
 	else:
 		print("save failed")
 
-## Extract graph data from the loaded resource file
+## Extract graph data from the given resource file
 # WARNING : I/O bound function. Takes up a huge amount of frame time in low-end devices.
 # Make this async?
 func init_graph(Graph_Data: GraphData):
@@ -78,12 +78,14 @@ func init_graph(Graph_Data: GraphData):
 			slotIndex += 1
 			graph_node.add_child(s_node)
 		
-		# For some weird reason the name of the graph nodes
-		# get changed after they have been added to the scene
-		# by their default name set by the engine
 		add_child(graph_node)
 		graph_node.name = g_node_data.name
+		
+		print("Graph Node name in scene :")
 		print(graph_node.name)
+		print("Actual name :")
+		print(g_node_data.name)
+		print("")
 	
 	print("all connections initiated from save file")
 	for connection in Graph_Data.connections:

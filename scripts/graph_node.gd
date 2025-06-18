@@ -34,6 +34,8 @@ func instantiate_duplicatead_node() -> void:
 		print("instantiated duplicated node")
 
 func _ready() -> void:
+	# action equivalent to String.validate_node_name()
+	name = name
 	connect("mouse_entered", _on_mouse_entered)
 	connect("mouse_exited", _on_mouse_exited)
 
