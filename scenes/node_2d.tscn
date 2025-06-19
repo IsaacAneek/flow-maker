@@ -31,10 +31,9 @@ filters = PackedStringArray("*.tres")
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.048
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.560001
+offset_top = 34.0
 grow_horizontal = 2
 grow_vertical = 2
 scroll_offset = Vector2(0, -0.560001)
@@ -50,8 +49,7 @@ script = ExtResource("3_04qyp")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.047
-offset_bottom = 0.16
+offset_bottom = 34.0
 
 [node name="MenuBar" type="MenuBar" parent="Panel"]
 layout_mode = 1
