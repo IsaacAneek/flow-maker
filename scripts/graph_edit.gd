@@ -1,5 +1,5 @@
 extends GraphEdit
-@onready var menu_handler: Control = $".."
+@onready var menu_handler = $"../MenuHandler"
 var selected_nodes = {}
 const GRAPH_NODE = preload("res://scenes/graph_node.tscn")
 const HEAD_NODE = preload("res://scenes/HEAD.tscn")

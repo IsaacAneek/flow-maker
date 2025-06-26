@@ -1,9 +1,11 @@
-extends Control
+extends Node
 
 var last_selected_path: String = ""
 @export var Graph_Edit: GraphEdit
-@onready var save_file_dialog: FileDialog = $SaveFileDialog
-@onready var open_file_dialog: FileDialog = $OpenFileDialog
+@onready var save_file_dialog: FileDialog = $"../SaveFileDialog"
+@onready var open_file_dialog: FileDialog = $"../OpenFileDialog"
+@onready var file_menu_popup: PopupMenu = $"../Panel/MenuBar/FileMenuPopup"
+@onready var open_menu_popup: PopupMenu = $"../Panel/MenuBar/OpenMenuPopup"
 
 enum FileMenuOptions {
 	NEW_GRAPH,
@@ -19,9 +21,11 @@ enum OpenMenuPopup {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-
-
+	save_file_dialog.connect("files_selected", _on_save_file_dialog_file_selected)
+	open_file_dialog.connect("files_selected", _on_open_file_dialog_file_selected)
+	file_menu_popup.connect("id_pressed", _on_file_menu_popup_id_pressed)
+	open_menu_popup.connect("id_pressed", _on_open_menu_popup_id_pressed)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
