@@ -36,6 +36,29 @@ func select_all_nodes() -> void:
 		if node is GraphNode:
 			node.selected = true
 
+# UNFINISHED
+func save_graph_as_JSON(filename: String) -> void:
+	var saved_graphed_data = {}
+	var allGraphNodes = []
+	
+	saved_graphed_data["version"] = "0.3.2.0"
+	saved_graphed_data["connections"] = get_connection_list()
+	for graphNode in get_children():
+		if graphNode is GraphNode:
+			var GRAPH_NODE_data = {}
+			GRAPH_NODE_data["name"] = graphNode.name.validate_node_name()
+			GRAPH_NODE_data["offset"] = var_to_str(graphNode.position_offset) 
+			
+			var sub_nodes = []
+			for subNode in graphNode.get_children():
+				if subNode is HBoxContainer:
+					var sub_node_data = {}
+					sub_node_data["topic"] = subNode.get_child(0).text
+					sub_nodes.append(sub_node_data)
+			GRAPH_NODE_data["sub_nodes"] = sub_nodes
+			allGraphNodes.append(GRAPH_NODE_data)
+	saved_graphed_data["graph_nodes"] = allGraphNodes
+	
 # MAKE THIS MORE REDABLE AND FRINDLY :<
 func save_graph_as_resource(filename: String) -> void:
 	var graph_data = GraphData.new()
