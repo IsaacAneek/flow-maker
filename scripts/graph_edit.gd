@@ -36,19 +36,61 @@ func select_all_nodes() -> void:
 		if node is GraphNode:
 			node.selected = true
 
-# UNFINISHED
+func load_graph_as_JSON(filename: String) -> void:
+	# Convert the dictionary to JSON string
+	var file = FileAccess.open(filename, FileAccess.READ)
+	if not file:
+		print("File open error : ", FileAccess.get_open_error())
+		return
+	var saved_graph_data = JSON.parse_string(file.get_as_text())
+	file.close()
+	
+	var allGraphNodes = saved_graph_data["graph_nodes"]
+	var version = saved_graph_data["version"]
+	var allConnections = saved_graph_data["connections"]
+	
+	for g_node_data in allGraphNodes:
+		var graph_node = GRAPH_NODE.instantiate() as GraphNode
+		graph_node.position_offset = str_to_var(g_node_data["offset"])
+		graph_node.name = g_node_data["name"]
+		
+		# Is this causing the problem??
+		var slotIndex = 1
+		for sub_node_data in g_node_data["sub_nodes"]:
+			# Init first node as the HEAD node (TODO)
+			var s_node = SUBNODE_H_BOX_CONTAINER.instantiate()
+			s_node.get_child(0).text = sub_node_data["topic"]
+			graph_node.set_slot(slotIndex, true, 0, Color(1, 1, 1, 1), true, 0, Color(1, 1, 1, 1))
+			slotIndex += 1
+			graph_node.add_child(s_node)
+		
+		add_child(graph_node)
+		graph_node.name = g_node_data["name"]
+		
+		print("Graph Node name in scene :")
+		print(graph_node.name)
+		print("Actual name :")
+		print(g_node_data.name)
+		print("")
+	
+	print("all connections initiated from save file")
+	for connection in allConnections:
+		print(connection)
+		connect_node(connection.from_node, connection.from_port, connection.to_node, connection.to_port)
+
+
 func save_graph_as_JSON(filename: String) -> void:
-	var saved_graphed_data = {}
+	var saved_graph_data = {}
 	var allGraphNodes = []
 	
-	saved_graphed_data["version"] = "0.3.2.0"
-	saved_graphed_data["connections"] = get_connection_list()
+	saved_graph_data["version"] = "0.3.2.0"
+	saved_graph_data["connections"] = get_connection_list()
 	for graphNode in get_children():
 		if graphNode is GraphNode:
-			var GRAPH_NODE_data = {}
+			var GRAPH_NODE_data = {} # This dictionary will hold all individual node values
+			
 			GRAPH_NODE_data["name"] = graphNode.name.validate_node_name()
 			GRAPH_NODE_data["offset"] = var_to_str(graphNode.position_offset) 
-			
 			var sub_nodes = []
 			for subNode in graphNode.get_children():
 				if subNode is HBoxContainer:
@@ -56,8 +98,18 @@ func save_graph_as_JSON(filename: String) -> void:
 					sub_node_data["topic"] = subNode.get_child(0).text
 					sub_nodes.append(sub_node_data)
 			GRAPH_NODE_data["sub_nodes"] = sub_nodes
+			
 			allGraphNodes.append(GRAPH_NODE_data)
-	saved_graphed_data["graph_nodes"] = allGraphNodes
+	saved_graph_data["graph_nodes"] = allGraphNodes
+	
+	# Convert the dictionary to JSON string
+	var json_string = JSON.stringify(saved_graph_data, "\t")
+	var file = FileAccess.open(filename, FileAccess.WRITE)
+	if not file:
+		print("File open error : ", FileAccess.get_open_error())
+		return
+	file.store_string(json_string)
+	file.close()
 	
 # MAKE THIS MORE REDABLE AND FRINDLY :<
 func save_graph_as_resource(filename: String) -> void:

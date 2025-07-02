@@ -1,0 +1,64 @@
+{
+	"connections": [
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_1055",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_1055",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_1064",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_1064",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_1073",
+			"to_port": 1
+		}
+	],
+	"graph_nodes": [
+		{
+			"name": "_graph_node",
+			"offset": "Vector2(398.423, 310.587)",
+			"sub_nodes": [
+				{
+					"topic": "shomething"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_1055",
+			"offset": "Vector2(698.433, 162.215)",
+			"sub_nodes": [
+				{
+					"topic": "my name"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_1064",
+			"offset": "Vector2(1002.1, 48.6159)",
+			"sub_nodes": [
+				{
+					"topic": "is"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_1073",
+			"offset": "Vector2(1307.6, -48.5121)",
+			"sub_nodes": [
+				{
+					"topic": "isaac"
+				}
+			]
+		}
+	],
+	"version": "0.3.2.0"
+}

@@ -53,12 +53,26 @@ func _on_open_menu_popup_id_pressed(id: int) -> void:
 
 func _on_save_file_dialog_file_selected(path: String) -> void:
 	last_selected_path = path
-	Graph_Edit.save_graph_as_resource(path)
-
+	
+	var file_extension = path.get_extension()
+	if file_extension == "tres":
+		Graph_Edit.save_graph_as_resource(path)
+	elif file_extension == "json":
+		Graph_Edit.save_graph_as_JSON(path)
+	else:
+		print("Invalid file extension")
+		# Handle invalid file extension
 
 func _on_open_file_dialog_file_selected(path: String) -> void:
 	last_selected_path = path
 	#Graph_Edit.clear_connections()
 	Graph_Edit.clear_graph()
-	Graph_Edit.load_graph_as_resource(path)
 	
+	var file_extension = path.get_extension()
+	if file_extension == "tres":
+		Graph_Edit.load_graph_as_resource(path)
+	elif file_extension == "json":
+		Graph_Edit.load_graph_as_JSON(path)
+	else:
+		print("Invalid file extension!");
+		# Handle invalid file extension error
