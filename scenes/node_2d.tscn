@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bfcd5su0eewnd" path="res://scripts/menu_option_manager.gd" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://dslsxad4dj6j4" path="res://scripts/graph_edit.gd" id="3_04qyp"]
 
-[node name="Control2D" type="Control" node_paths=PackedStringArray("Graph_Edit")]
+[node name="Control2D" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,13 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rnjyy")
+
+[node name="MenuHandler" type="Node" parent="." node_paths=PackedStringArray("Graph_Edit")]
 script = ExtResource("2_4vge2")
-Graph_Edit = NodePath("GraphEdit")
+Graph_Edit = NodePath("../GraphEdit")
 
 [node name="SaveFileDialog" type="FileDialog" parent="."]
 initial_position = 1
 access = 2
-filters = PackedStringArray("*.tres")
+filters = PackedStringArray("*.tres", "*.json")
 
 [node name="OpenFileDialog" type="FileDialog" parent="."]
 title = "Open a File"
@@ -26,7 +28,7 @@ initial_position = 1
 ok_button_text = "Open"
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.tres")
+filters = PackedStringArray("*.tres", "*.json")
 
 [node name="GraphEdit" type="GraphEdit" parent="."]
 layout_mode = 1
@@ -36,7 +38,6 @@ anchor_bottom = 1.0
 offset_top = 34.0
 grow_horizontal = 2
 grow_vertical = 2
-scroll_offset = Vector2(0, -0.560001)
 show_grid = false
 snapping_enabled = false
 right_disconnects = true
@@ -79,12 +80,12 @@ item_count = 1
 item_0/text = "Open Resource"
 item_0/id = 0
 
-[connection signal="file_selected" from="SaveFileDialog" to="." method="_on_save_file_dialog_file_selected"]
-[connection signal="file_selected" from="OpenFileDialog" to="." method="_on_open_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveFileDialog" to="MenuHandler" method="_on_save_file_dialog_file_selected"]
+[connection signal="file_selected" from="OpenFileDialog" to="MenuHandler" method="_on_open_file_dialog_file_selected"]
 [connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_connection_request"]
 [connection signal="delete_nodes_request" from="GraphEdit" to="GraphEdit" method="_on_delete_nodes_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_disconnection_request"]
 [connection signal="node_deselected" from="GraphEdit" to="GraphEdit" method="_on_node_deselected"]
 [connection signal="node_selected" from="GraphEdit" to="GraphEdit" method="_on_node_selected"]
-[connection signal="id_pressed" from="Panel/MenuBar/FileMenuPopup" to="." method="_on_file_menu_popup_id_pressed"]
-[connection signal="id_pressed" from="Panel/MenuBar/OpenMenuPopup" to="." method="_on_open_menu_popup_id_pressed"]
+[connection signal="id_pressed" from="Panel/MenuBar/FileMenuPopup" to="MenuHandler" method="_on_file_menu_popup_id_pressed"]
+[connection signal="id_pressed" from="Panel/MenuBar/OpenMenuPopup" to="MenuHandler" method="_on_open_menu_popup_id_pressed"]
