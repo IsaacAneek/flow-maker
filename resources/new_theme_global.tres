@@ -57,10 +57,10 @@ expand_margin_bottom = 7.0
 bg_color = Color(0.113725, 0.113725, 0.113725, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gq8cl"]
-bg_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65g2t"]
-bg_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+bg_color = Color(0.0627451, 0.0666667, 0.0784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3vnn"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 0.627451)
@@ -109,12 +109,12 @@ border_width_bottom = 8
 border_color = Color(0.192157, 0.192157, 0.192157, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfq1f"]
-bg_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+border_color = Color(0.0980392, 0.101961, 0.109804, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_do4b1"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -125,7 +125,7 @@ border_width_bottom = 8
 border_color = Color(0.192157, 0.192157, 0.192157, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkj5a"]
-bg_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_qa2gg"]
 font_names = PackedStringArray("Arial")
@@ -139,7 +139,7 @@ multichannel_signed_distance_field = true
 bg_color = Color(0.113725, 0.113725, 0.113725, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2lef"]
-bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_b4tno"]
 font_names = PackedStringArray("Arial")

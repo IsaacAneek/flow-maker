@@ -24,13 +24,6 @@ config/icon="uid://bkipjv33rxe8"
 
 file_logging/enable_file_logging=true
 
-[display]
-
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
-
 [editor]
 
 version_control/plugin_name="GitPlugin"
