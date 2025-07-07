@@ -1,6 +1,13 @@
-[gd_resource type="Theme" load_steps=41 format=3 uid="uid://du7hqtwwqg5mp"]
+[gd_resource type="Theme" load_steps=48 format=3 uid="uid://du7hqtwwqg5mp"]
 
 [ext_resource type="Texture2D" uid="uid://bxyk0lrscb48d" path="res://assets/blank.png" id="1_qa2gg"]
+[ext_resource type="Texture2D" uid="uid://cw34g467bxxgr" path="res://ui/icons/grid_on.svg" id="1_whi2o"]
+[ext_resource type="Texture2D" uid="uid://dn5f4cybq7qyo" path="res://ui/icons/auto_awesome_mosaic.svg" id="2_whi2o"]
+[ext_resource type="Texture2D" uid="uid://cfpiqt3prqx1h" path="res://ui/icons/minimap_2.svg" id="3_p41bf"]
+[ext_resource type="Texture2D" uid="uid://doe5o6whnm20u" path="res://ui/icons/zoom_in.svg" id="4_1n1ts"]
+[ext_resource type="Texture2D" uid="uid://lnyochevb0or" path="res://ui/icons/grid_3x3.svg" id="4_whi2o"]
+[ext_resource type="Texture2D" uid="uid://cv05so05vvuwg" path="res://ui/icons/zoom_out.svg" id="5_b6dpo"]
+[ext_resource type="Texture2D" uid="uid://dgb4mhyjlurb7" path="res://ui/icons/looks_one.svg" id="6_jtc1s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vv2u3"]
 bg_color = Color(0.113725, 0.113725, 0.113725, 1)
@@ -16,7 +23,7 @@ content_margin_left = 7.0
 content_margin_top = 7.0
 content_margin_right = 7.0
 content_margin_bottom = 7.0
-bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+bg_color = Color(0.738139, 0.613063, 0.279897, 1)
 border_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmp0m"]
@@ -101,12 +108,12 @@ font_names = PackedStringArray("Arial")
 multichannel_signed_distance_field = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhsnk"]
-bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+bg_color = Color(0.738139, 0.613063, 0.279897, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.192157, 0.192157, 0.192157, 1)
+border_width_bottom = 10
+border_color = Color(0.738139, 0.613063, 0.279897, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfq1f"]
 bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
@@ -117,15 +124,17 @@ border_width_bottom = 8
 border_color = Color(0.0980392, 0.101961, 0.109804, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_do4b1"]
-bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+bg_color = Color(0.738139, 0.613063, 0.279897, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color(0.192157, 0.192157, 0.192157, 1)
+border_color = Color(0.738139, 0.613063, 0.279897, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkj5a"]
 bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_qa2gg"]
 font_names = PackedStringArray("Arial")
@@ -136,7 +145,7 @@ font_names = PackedStringArray("Arial")
 multichannel_signed_distance_field = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulupi"]
-bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+bg_color = Color(0.738139, 0.613063, 0.279897, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2lef"]
 bg_color = Color(0.0980392, 0.101961, 0.109804, 1)
@@ -170,6 +179,8 @@ bg_color = Color(0.851769, 0.851769, 0.851769, 1)
 
 [resource]
 AcceptDialog/styles/panel = SubResource("StyleBoxFlat_vv2u3")
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
 Button/fonts/font = SubResource("SystemFont_gq8cl")
 Button/styles/focus = SubResource("StyleBoxEmpty_qa2gg")
 Button/styles/hover = SubResource("StyleBoxFlat_p7xdp")
@@ -181,7 +192,13 @@ FileDialog/fonts/title_font = SubResource("SystemFont_65g2t")
 FileDialog/styles/embedded_border = SubResource("StyleBoxFlat_6ov4b")
 FileDialog/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_wvg3t")
 FileDialog/styles/panel = SubResource("StyleBoxFlat_j5wri")
-GraphEdit/colors/activity = Color(0.842763, 0.512436, 0, 1)
+GraphEdit/icons/grid_toggle = ExtResource("1_whi2o")
+GraphEdit/icons/layout = ExtResource("2_whi2o")
+GraphEdit/icons/minimap_toggle = ExtResource("3_p41bf")
+GraphEdit/icons/snapping_toggle = ExtResource("4_whi2o")
+GraphEdit/icons/zoom_in = ExtResource("4_1n1ts")
+GraphEdit/icons/zoom_out = ExtResource("5_b6dpo")
+GraphEdit/icons/zoom_reset = ExtResource("6_jtc1s")
 GraphEdit/styles/menu_panel = SubResource("StyleBoxFlat_gq8cl")
 GraphEdit/styles/panel = SubResource("StyleBoxFlat_65g2t")
 GraphNode/constants/separation = 0
@@ -198,12 +215,16 @@ Label/font_sizes/font_size = 16
 Label/fonts/font = SubResource("SystemFont_vv2u3")
 LineEdit/fonts/font = SubResource("SystemFont_wvg3t")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_vv2u3")
+MenuBar/colors/font_hover_color = Color(0, 0, 0, 1)
+MenuBar/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+MenuBar/colors/font_pressed_color = Color(0, 0, 0, 1)
 MenuBar/font_sizes/font_size = 14
 MenuBar/fonts/font = SubResource("SystemFont_5ey58")
 MenuBar/styles/hover = SubResource("StyleBoxFlat_rhsnk")
 MenuBar/styles/normal = SubResource("StyleBoxFlat_bfq1f")
 MenuBar/styles/pressed = SubResource("StyleBoxFlat_do4b1")
 Panel/styles/panel = SubResource("StyleBoxFlat_vkj5a")
+PopupMenu/colors/font_hover_color = Color(0, 0, 0, 1)
 PopupMenu/constants/item_end_padding = 8
 PopupMenu/constants/item_start_padding = 8
 PopupMenu/constants/v_separation = 8

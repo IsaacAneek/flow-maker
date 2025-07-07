@@ -1,10 +1,10 @@
 extends GraphEdit
-@onready var menu_handler = $"../MenuHandler"
+@onready var menu_handler = %MenuHandler
 var selected_nodes = {}
 const GRAPH_NODE = preload("res://scenes/graph_node.tscn")
 const HEAD_NODE = preload("res://scenes/HEAD.tscn")
 const SUBNODE_H_BOX_CONTAINER = preload("res://scenes/subnode_h_box_container.tscn")
-@onready var save_file_dialog: FileDialog = $"../SaveFileDialog"
+@onready var save_file_dialog: FileDialog = %SaveFileDialog
 #@export_range(0.0, 1.0, 0.1) var amount: float
 
 func _input(event: InputEvent) -> void:
