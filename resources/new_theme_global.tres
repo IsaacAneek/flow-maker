@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=61 format=3 uid="uid://du7hqtwwqg5mp"]
+[gd_resource type="Theme" load_steps=62 format=3 uid="uid://du7hqtwwqg5mp"]
 
 [ext_resource type="Texture2D" uid="uid://c25pnxkuk23e0" path="res://ui/icons/create_new_folder_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" id="1_koy8k"]
 [ext_resource type="Texture2D" uid="uid://cw34g467bxxgr" path="res://ui/icons/grid_on.svg" id="1_whi2o"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://10tt0kf45yrg" path="res://ui/icons/stat_minus_1_24dp_E3E3E3_FILL0_wght200_GRAD0_opsz24.svg" id="9_1n1ts"]
 [ext_resource type="Texture2D" uid="uid://bjbkxloxyuweu" path="res://ui/icons/stat_1_24dp_E3E3E3_FILL0_wght200_GRAD0_opsz24.svg" id="10_b6dpo"]
 [ext_resource type="Texture2D" uid="uid://cneibk31iw186" path="res://ui/icons/stat_minus_1_2.svg" id="10_jtc1s"]
+[ext_resource type="Texture2D" uid="uid://bxyk0lrscb48d" path="res://assets/blank.png" id="12_4gspu"]
 [ext_resource type="Texture2D" uid="uid://5meoouqx2bi0" path="res://ui/icons/stat_1_2.svg" id="12_koy8k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vv2u3"]
@@ -286,6 +287,7 @@ GraphEdit/icons/zoom_reset = ExtResource("6_jtc1s")
 GraphEdit/styles/menu_panel = SubResource("StyleBoxFlat_gq8cl")
 GraphEdit/styles/panel = SubResource("StyleBoxFlat_65g2t")
 GraphNode/constants/separation = 0
+GraphNode/icons/port = ExtResource("12_4gspu")
 GraphNode/styles/panel = SubResource("StyleBoxFlat_j3vnn")
 GraphNode/styles/panel_selected = SubResource("StyleBoxFlat_b4tno")
 GraphNode/styles/titlebar = SubResource("StyleBoxFlat_5ey58")
