@@ -15,9 +15,9 @@ config/description="A simple  flow chart generator. Now build flow charts, graph
 config/version="1.0.0.0"
 run/main_scene="uid://cro8c5rl6gevw"
 config/features=PackedStringArray("4.4", "Mobile")
-boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+boot_splash/image="uid://c1jo6bbar2i8f"
 config/icon="uid://kdv54hhbblne"
 
 [debug]
