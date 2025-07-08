@@ -15,7 +15,7 @@ func _input(event: InputEvent) -> void:
 			if menu_handler.last_selected_path == "":
 				save_file_dialog.visible = true
 			else:
-				save_graph_as_resource(menu_handler.last_selected_path)
+				save_graph(menu_handler.last_selected_path)
 		elif event.is_action_pressed("select_all"):
 			select_all_nodes()
 
@@ -133,6 +133,27 @@ func save_graph_as_resource(filename: String) -> void:
 		print(graph_data.connections)
 	else:
 		print("save failed")
+
+
+func load_graph(path: String) -> void:
+	var file_extension = path.get_extension()
+	if file_extension == "tres":
+		load_graph_as_resource(path)
+	elif file_extension == "json":
+		load_graph_as_JSON(path)
+	else:
+		print("Invalid file extension!");
+		# Handle invalid file extension error
+
+func save_graph(path: String) -> void:
+	var file_extension = path.get_extension()
+	if file_extension == "tres":
+		save_graph_as_resource(path)
+	elif file_extension == "json":
+		save_graph_as_JSON(path)
+	else:
+		print("Invalid file extension")
+		# Handle invalid file extension
 
 ## Extract graph data from the given resource file
 # WARNING : I/O bound function. Takes up a huge amount of frame time in low-end devices.

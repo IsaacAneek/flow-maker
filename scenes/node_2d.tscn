@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cro8c5rl6gevw"]
+[gd_scene load_steps=5 format=3 uid="uid://cro8c5rl6gevw"]
 
 [ext_resource type="Theme" uid="uid://du7hqtwwqg5mp" path="res://resources/new_theme_global.tres" id="1_04qyp"]
 [ext_resource type="Script" uid="uid://bfcd5su0eewnd" path="res://scripts/menu_option_manager.gd" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://dslsxad4dj6j4" path="res://scripts/graph_edit.gd" id="3_04qyp"]
+[ext_resource type="PackedScene" uid="uid://chpjcepdpwo1h" path="res://scenes/graph_node.tscn" id="4_4vge2"]
 
 [node name="Control2D" type="Control"]
 layout_mode = 3
@@ -52,15 +53,13 @@ offset_bottom = 35.0
 unique_name_in_owner = true
 title = "File"
 size = Vector2i(147, 100)
-item_count = 4
+item_count = 3
 item_0/text = "New Graph"
 item_0/id = 0
-item_1/text = "Create Node"
+item_1/text = "Save"
 item_1/id = 1
-item_2/text = "Create HEAD Node"
+item_2/text = "Save as"
 item_2/id = 2
-item_3/text = "Save as Resource"
-item_3/id = 3
 
 [node name="OpenMenuPopup" type="PopupMenu" parent="Panel/MenuBar"]
 unique_name_in_owner = true
@@ -68,12 +67,17 @@ auto_translate_mode = 1
 title = "Open"
 size = Vector2i(123, 100)
 item_count = 1
-item_0/text = "Open Resource"
+item_0/text = "Open a Graph"
 item_0/id = 0
 
 [node name="Create" type="PopupMenu" parent="Panel/MenuBar"]
+unique_name_in_owner = true
+item_count = 1
+item_0/text = "Create new node"
+item_0/id = 0
 
 [node name="About" type="PopupMenu" parent="Panel/MenuBar"]
+unique_name_in_owner = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -107,10 +111,26 @@ anchor_bottom = -0.002
 offset_top = 0.226
 offset_bottom = 50.226
 
+[node name="_graph_node" parent="VBoxContainer/GraphEdit" instance=ExtResource("4_4vge2")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 388.0
+offset_top = 175.2
+offset_right = 595.0
+offset_bottom = 307.2
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.8, 0.8)
+
 [connection signal="file_selected" from="SaveFileDialog" to="MenuHandler" method="_on_save_file_dialog_file_selected"]
 [connection signal="file_selected" from="OpenFileDialog" to="MenuHandler" method="_on_open_file_dialog_file_selected"]
 [connection signal="id_pressed" from="Panel/MenuBar/FileMenuPopup" to="MenuHandler" method="_on_file_menu_popup_id_pressed"]
 [connection signal="id_pressed" from="Panel/MenuBar/OpenMenuPopup" to="MenuHandler" method="_on_open_menu_popup_id_pressed"]
+[connection signal="id_pressed" from="Panel/MenuBar/Create" to="MenuHandler" method="_on_create_id_pressed"]
 [connection signal="connection_request" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_connection_request"]
 [connection signal="delete_nodes_request" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_delete_nodes_request"]
 [connection signal="disconnection_request" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_disconnection_request"]

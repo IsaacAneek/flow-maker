@@ -9,10 +9,12 @@ var last_selected_path: String = ""
 
 enum FileMenuOptions {
 	NEW_GRAPH,
-	CREATE_NODE,
-	CREATE_HEAD_NODE,
-	#SAVE_AS_JSON
+	SAVE,
 	SAVE_AS_RESOURCE,
+}
+
+enum CreateMenuOptions {
+	CREATE_NEW_NODE
 }
 
 enum OpenMenuPopup {
@@ -37,10 +39,10 @@ func _on_file_menu_popup_id_pressed(id: int) -> void:
 		FileMenuOptions.NEW_GRAPH:
 			last_selected_path = ""
 			Graph_Edit.clear_graph()
-		FileMenuOptions.CREATE_HEAD_NODE:
-			Graph_Edit.create_head_node()
-		FileMenuOptions.CREATE_NODE:
-			Graph_Edit.create_node()
+		#FileMenuOptions.CREATE_HEAD_NODE:
+			#Graph_Edit.create_head_node()
+		FileMenuOptions.SAVE:
+			Graph_Edit.save_graph(last_selected_path)
 		FileMenuOptions.SAVE_AS_RESOURCE:
 			save_file_dialog.visible = true
 
@@ -51,28 +53,19 @@ func _on_open_menu_popup_id_pressed(id: int) -> void:
 			open_file_dialog.visible = true
 
 
+
 func _on_save_file_dialog_file_selected(path: String) -> void:
 	last_selected_path = path
-	
-	var file_extension = path.get_extension()
-	if file_extension == "tres":
-		Graph_Edit.save_graph_as_resource(path)
-	elif file_extension == "json":
-		Graph_Edit.save_graph_as_JSON(path)
-	else:
-		print("Invalid file extension")
-		# Handle invalid file extension
+	Graph_Edit.save_graph(path)
+
 
 func _on_open_file_dialog_file_selected(path: String) -> void:
 	last_selected_path = path
 	#Graph_Edit.clear_connections()
 	Graph_Edit.clear_graph()
-	
-	var file_extension = path.get_extension()
-	if file_extension == "tres":
-		Graph_Edit.load_graph_as_resource(path)
-	elif file_extension == "json":
-		Graph_Edit.load_graph_as_JSON(path)
-	else:
-		print("Invalid file extension!");
-		# Handle invalid file extension error
+	Graph_Edit.load_graph(path)
+
+func _on_create_id_pressed(id: int) -> void:
+	match(id):
+		CreateMenuOptions.CREATE_NEW_NODE:
+			Graph_Edit.create_node()

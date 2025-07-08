@@ -1,7 +1,6 @@
-[gd_resource type="Theme" load_steps=62 format=3 uid="uid://du7hqtwwqg5mp"]
+[gd_resource type="Theme" load_steps=61 format=3 uid="uid://du7hqtwwqg5mp"]
 
 [ext_resource type="Texture2D" uid="uid://c25pnxkuk23e0" path="res://ui/icons/create_new_folder_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" id="1_koy8k"]
-[ext_resource type="Texture2D" uid="uid://bxyk0lrscb48d" path="res://assets/blank.png" id="1_qa2gg"]
 [ext_resource type="Texture2D" uid="uid://cw34g467bxxgr" path="res://ui/icons/grid_on.svg" id="1_whi2o"]
 [ext_resource type="Texture2D" uid="uid://c8y142dnkkf6b" path="res://ui/icons/refresh_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" id="2_4gspu"]
 [ext_resource type="Texture2D" uid="uid://dn5f4cybq7qyo" path="res://ui/icons/auto_awesome_mosaic.svg" id="2_whi2o"]
@@ -287,8 +286,6 @@ GraphEdit/icons/zoom_reset = ExtResource("6_jtc1s")
 GraphEdit/styles/menu_panel = SubResource("StyleBoxFlat_gq8cl")
 GraphEdit/styles/panel = SubResource("StyleBoxFlat_65g2t")
 GraphNode/constants/separation = 0
-GraphNode/icons/port = ExtResource("1_qa2gg")
-GraphNode/icons/resizer = null
 GraphNode/styles/panel = SubResource("StyleBoxFlat_j3vnn")
 GraphNode/styles/panel_selected = SubResource("StyleBoxFlat_b4tno")
 GraphNode/styles/titlebar = SubResource("StyleBoxFlat_5ey58")
