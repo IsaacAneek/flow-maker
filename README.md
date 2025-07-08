@@ -18,6 +18,10 @@ A simple flowchart generator. Now generate flowcharts, roadmaps, graphs with eas
 
 Download the app from [here](https://github.com/IsaacAneek/flow-maker/releases "here"). No configuration needed. Just download and start using it. Currently only supports Windows x32 and x64. Planning to release ports as well.
 
+## USAGE
+![usage](https://github.com/user-attachments/assets/846528c9-63cd-4916-952c-f39fe88fa9f0)
+
+
 ## CONTRIBUTE
 
 You can support by adding features, creating issues, adding documentations basically by doing anything.
