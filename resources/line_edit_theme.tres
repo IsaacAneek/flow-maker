@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://buquvwwcvgncd"]
+
+[sub_resource type="SystemFont" id="SystemFont_e86eq"]
+font_names = PackedStringArray("Arial")
+multichannel_signed_distance_field = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm2ql"]
+
+[sub_resource type="SystemFont" id="SystemFont_cm2ql"]
+font_names = PackedStringArray("Comic Sans MS")
+multichannel_signed_distance_field = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e86eq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm2ql"]
+content_margin_left = 60.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0745098, 0.0862745, 0.121569, 1)
+border_color = Color(0.734122, 0.760114, 0.834103, 1)
+
+[resource]
+Label/font_sizes/font_size = 20
+Label/fonts/font = SubResource("SystemFont_e86eq")
+Label/styles/normal = SubResource("StyleBoxEmpty_cm2ql")
+LineEdit/font_sizes/font_size = 27
+LineEdit/fonts/font = SubResource("SystemFont_cm2ql")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_e86eq")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_cm2ql")

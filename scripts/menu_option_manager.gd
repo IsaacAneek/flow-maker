@@ -4,8 +4,8 @@ var last_selected_path: String = ""
 @export var Graph_Edit: GraphEdit
 @onready var save_file_dialog: FileDialog = $"../SaveFileDialog"
 @onready var open_file_dialog: FileDialog = $"../OpenFileDialog"
-@onready var file_menu_popup: PopupMenu = $"../Panel/MenuBar/FileMenuPopup"
-@onready var open_menu_popup: PopupMenu = $"../Panel/MenuBar/OpenMenuPopup"
+@onready var file_menu_popup: PopupMenu = %FileMenuPopup
+@onready var open_menu_popup: PopupMenu = %OpenMenuPopup
 
 enum FileMenuOptions {
 	NEW_GRAPH,

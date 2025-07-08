@@ -1,5 +1,7 @@
-extends TextEdit
-
+@tool
+extends LineEdit
+@export var on_hover_color: Color
+@export var default_color: Color
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,9 +14,9 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_mouse_entered() -> void:
-	modulate = Color("7d7d7d")
+	modulate = on_hover_color
 	await get_tree().create_timer(0.3).timeout
-	modulate = Color("ffffff")
+	modulate = default_color
 
 func _on_mouse_exited() -> void:
-	modulate = Color("ffffff")
+	modulate = default_color
