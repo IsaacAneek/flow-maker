@@ -12,13 +12,15 @@ config_version=5
 
 config/name="Flow Maker"
 config/description="A simple  flow chart generator. Now build flow charts, graphs, roadmaps with ease and for free."
-config/version="0.3.1.0"
+config/version="1.0.0.0"
 run/main_scene="uid://cro8c5rl6gevw"
 config/features=PackedStringArray("4.4", "Mobile")
+boot_splash/bg_color=Color(0.0745098, 0.0862745, 0.121569, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="uid://bkipjv33rxe8"
+boot_splash/image="uid://kdv54hhbblne"
+config/icon="uid://kdv54hhbblne"
 
 [debug]
 
