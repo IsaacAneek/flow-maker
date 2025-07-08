@@ -1,7 +1,7 @@
 @tool
 extends LineEdit
-@export var on_hover_color: Color
-@export var default_color: Color
+@export var on_hover_color: Color = Color("8b722e")
+@export var default_color: Color = Color("ffffff")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

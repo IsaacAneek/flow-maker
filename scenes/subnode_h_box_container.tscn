@@ -19,8 +19,7 @@ expand_to_text_length = true
 caret_blink = true
 caret_mid_grapheme = true
 script = ExtResource("1_47teh")
-on_hover_color = Color(0.85645, 0.724027, 0.379031, 1)
-default_color = Color(1, 1, 1, 1)
+on_hover_color = Color(0.544633, 0.446588, 0.181932, 1)
 
 [node name="RemoveSubNodeButton" type="Button" parent="."]
 custom_minimum_size = Vector2(30, 0)
