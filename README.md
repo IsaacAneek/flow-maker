@@ -22,6 +22,8 @@ Download the app from [here](https://github.com/IsaacAneek/flow-maker/releases "
 
 You can support by adding features, creating issues, adding documentations basically by doing anything.
 
+## LICENSE
+The project is under [MIT License](https://mit-license.org/). Material icons from Google are under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
 ## TODO
 - Add wavey effect on the connections. (Optional)
 - Add scrollshot feature. (Important)
