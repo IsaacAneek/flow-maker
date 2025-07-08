@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cro8c5rl6gevw"]
+[gd_scene load_steps=5 format=3 uid="uid://cro8c5rl6gevw"]
 
 [ext_resource type="Theme" uid="uid://du7hqtwwqg5mp" path="res://resources/new_theme_global.tres" id="1_04qyp"]
 [ext_resource type="Script" uid="uid://bfcd5su0eewnd" path="res://scripts/menu_option_manager.gd" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://dslsxad4dj6j4" path="res://scripts/graph_edit.gd" id="3_04qyp"]
 [ext_resource type="PackedScene" uid="uid://chpjcepdpwo1h" path="res://scenes/graph_node.tscn" id="4_4vge2"]
-[ext_resource type="PackedScene" uid="uid://dssp6cu8jkbip" path="res://scenes/subnode_h_box_container.tscn" id="5_04qyp"]
 
 [node name="Control2D" type="Control"]
 layout_mode = 3
@@ -112,53 +111,11 @@ offset_bottom = 50.226
 [node name="_graph_node" parent="VBoxContainer/GraphEdit" instance=ExtResource("4_4vge2")]
 layout_mode = 0
 anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 388.0
-offset_top = 175.2
-offset_right = 707.0
-offset_bottom = 473.2
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = -192.5
+offset_top = -131.3
+offset_right = 14.5
+offset_bottom = 0.700012
 scale = Vector2(0.8, 0.8)
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-slot/2/left_enabled = false
-slot/2/left_type = 0
-slot/2/left_color = Color(1, 1, 1, 1)
-slot/2/left_icon = null
-slot/2/right_enabled = false
-slot/2/right_type = 0
-slot/2/right_color = Color(1, 1, 1, 1)
-slot/2/right_icon = null
-slot/2/draw_stylebox = true
-slot/3/left_enabled = false
-slot/3/left_type = 0
-slot/3/left_color = Color(1, 1, 1, 1)
-slot/3/left_icon = null
-slot/3/right_enabled = false
-slot/3/right_type = 0
-slot/3/right_color = Color(1, 1, 1, 1)
-slot/3/right_icon = null
-slot/3/draw_stylebox = true
-
-[node name="SubnodeHBoxContainer" parent="VBoxContainer/GraphEdit/_graph_node" instance=ExtResource("5_04qyp")]
-layout_mode = 2
-
-[node name="SubnodeHBoxContainer2" parent="VBoxContainer/GraphEdit/_graph_node" instance=ExtResource("5_04qyp")]
-layout_mode = 2
-
-[node name="SubnodeHBoxContainer3" parent="VBoxContainer/GraphEdit/_graph_node" instance=ExtResource("5_04qyp")]
-layout_mode = 2
 
 [connection signal="file_selected" from="SaveFileDialog" to="MenuHandler" method="_on_save_file_dialog_file_selected"]
 [connection signal="file_selected" from="OpenFileDialog" to="MenuHandler" method="_on_open_file_dialog_file_selected"]
