@@ -1,34 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://dssp6cu8jkbip"]
+[gd_scene load_steps=5 format=3 uid="uid://dssp6cu8jkbip"]
 
 [ext_resource type="Script" uid="uid://643fnedidpi8" path="res://scripts/sub_node_textEdit.gd" id="1_47teh"]
+[ext_resource type="Theme" uid="uid://buquvwwcvgncd" path="res://resources/line_edit_theme.tres" id="1_tkyhe"]
 [ext_resource type="Script" uid="uid://c4kxlir1hn111" path="res://scripts/remove_sub_node.gd" id="2_tkyhe"]
+[ext_resource type="Texture2D" uid="uid://dcn0doxcp8qc2" path="res://ui/icons/close_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" id="3_osnbx"]
 
 [node name="SubnodeHBoxContainer" type="HBoxContainer"]
 offset_right = 143.0
 offset_bottom = 35.0
+theme = ExtResource("1_tkyhe")
 
-[node name="SubNode" type="TextEdit" parent="."]
+[node name="SubNode" type="LineEdit" parent="."]
 layout_mode = 2
+size_flags_horizontal = 3
 placeholder_text = "Write your topic"
-scroll_fit_content_height = true
-scroll_fit_content_width = true
+alignment = 1
+expand_to_text_length = true
 caret_blink = true
-caret_blink_interval = 0.35
 caret_mid_grapheme = true
 script = ExtResource("1_47teh")
+on_hover_color = Color(0.85645, 0.724027, 0.379031, 1)
+default_color = Color(1, 1, 1, 1)
 
 [node name="RemoveSubNodeButton" type="Button" parent="SubNode"]
 layout_mode = 2
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = 9.0
-offset_right = 8.0
-offset_bottom = 5.0
+offset_left = -27.0
+offset_top = 19.0
+offset_right = 21.0
+offset_bottom = 9.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 0
-text = "x"
+icon = ExtResource("3_osnbx")
+icon_alignment = 1
 script = ExtResource("2_tkyhe")
 
 [connection signal="pressed" from="SubNode/RemoveSubNodeButton" to="SubNode/RemoveSubNodeButton" method="_on_pressed"]

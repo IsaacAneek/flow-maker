@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://chpjcepdpwo1h"]
+[gd_scene load_steps=3 format=3 uid="uid://chpjcepdpwo1h"]
 
+[ext_resource type="Theme" uid="uid://buquvwwcvgncd" path="res://resources/line_edit_theme.tres" id="1_xa3py"]
 [ext_resource type="Script" uid="uid://rrmytnw58rbh" path="res://scripts/graph_node.gd" id="1_xy06m"]
 
 [node name="_graph_node" type="GraphNode"]
@@ -16,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 1
 mouse_filter = 1
+theme = ExtResource("1_xa3py")
 position_offset = Vector2(485, 219)
 resizable = true
 ignore_invalid_connection_type = true

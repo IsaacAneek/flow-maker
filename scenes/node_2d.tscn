@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cro8c5rl6gevw"]
 
-[ext_resource type="Theme" uid="uid://du7hqtwwqg5mp" path="res://resources/new_theme_global.tres" id="1_rnjyy"]
+[ext_resource type="Theme" uid="uid://du7hqtwwqg5mp" path="res://resources/new_theme_global.tres" id="1_04qyp"]
 [ext_resource type="Script" uid="uid://bfcd5su0eewnd" path="res://scripts/menu_option_manager.gd" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://dslsxad4dj6j4" path="res://scripts/graph_edit.gd" id="3_04qyp"]
 [ext_resource type="PackedScene" uid="uid://chpjcepdpwo1h" path="res://scenes/graph_node.tscn" id="4_4vge2"]
@@ -14,7 +14,7 @@ anchor_bottom = 1.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_rnjyy")
+theme = ExtResource("1_04qyp")
 
 [node name="MenuHandler" type="Node" parent="." node_paths=PackedStringArray("Graph_Edit")]
 unique_name_in_owner = true
@@ -24,6 +24,7 @@ Graph_Edit = NodePath("../VBoxContainer/GraphEdit")
 [node name="SaveFileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
 initial_position = 1
+size = Vector2i(659, 360)
 access = 2
 filters = PackedStringArray("*.tres", "*.json")
 
@@ -81,6 +82,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -8.0
 offset_top = 35.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -105,7 +107,7 @@ anchor_top = -0.002
 anchor_right = 1.0
 anchor_bottom = -0.002
 offset_top = 0.226
-offset_bottom = 57.226
+offset_bottom = 50.226
 
 [node name="_graph_node" parent="VBoxContainer/GraphEdit" instance=ExtResource("4_4vge2")]
 layout_mode = 0
@@ -116,7 +118,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 388.0
 offset_top = 175.2
-offset_right = 606.0
+offset_right = 707.0
 offset_bottom = 473.2
 grow_horizontal = 1
 grow_vertical = 1
