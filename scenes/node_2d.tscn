@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cro8c5rl6gevw"]
+[gd_scene load_steps=4 format=3 uid="uid://cro8c5rl6gevw"]
 
 [ext_resource type="Theme" uid="uid://du7hqtwwqg5mp" path="res://resources/new_theme_global.tres" id="1_04qyp"]
 [ext_resource type="Script" uid="uid://bfcd5su0eewnd" path="res://scripts/menu_option_manager.gd" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://dslsxad4dj6j4" path="res://scripts/graph_edit.gd" id="3_04qyp"]
-[ext_resource type="PackedScene" uid="uid://chpjcepdpwo1h" path="res://scenes/graph_node.tscn" id="4_4vge2"]
 
 [node name="Control2D" type="Control"]
 layout_mode = 3
@@ -107,15 +106,6 @@ anchor_right = 1.0
 anchor_bottom = -0.002
 offset_top = 0.226
 offset_bottom = 50.226
-
-[node name="_graph_node" parent="VBoxContainer/GraphEdit" instance=ExtResource("4_4vge2")]
-layout_mode = 0
-anchors_preset = 0
-offset_left = -192.5
-offset_top = -131.3
-offset_right = 14.5
-offset_bottom = 0.700012
-scale = Vector2(0.8, 0.8)
 
 [connection signal="file_selected" from="SaveFileDialog" to="MenuHandler" method="_on_save_file_dialog_file_selected"]
 [connection signal="file_selected" from="OpenFileDialog" to="MenuHandler" method="_on_open_file_dialog_file_selected"]
