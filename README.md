@@ -2,7 +2,7 @@
 # FLOW MAKER
 
 ![](https://img.shields.io/badge/License-MIT-blue) 
-![](https://img.shields.io/badge/release-v0.3.1.0-blue)
+![](https://img.shields.io/badge/release-v1.0.1-blue)
 ![](https://img.shields.io/badge/Godot-v4.4.1.stable.official-blue)
 ![example](https://github.com/user-attachments/assets/a576c337-2d83-489a-a5cd-9c04684e21e2)
 
