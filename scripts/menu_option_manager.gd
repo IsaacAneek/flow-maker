@@ -64,6 +64,7 @@ func _on_open_file_dialog_file_selected(path: String) -> void:
 	#Graph_Edit.clear_connections()
 	Graph_Edit.clear_graph()
 	Graph_Edit.load_graph(path)
+	Graph_Edit.arrange_nodes()
 
 func _on_create_id_pressed(id: int) -> void:
 	match(id):
