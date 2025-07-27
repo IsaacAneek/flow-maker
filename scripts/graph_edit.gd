@@ -36,15 +36,7 @@ func select_all_nodes() -> void:
 		if node is GraphNode:
 			node.selected = true
 
-func load_graph_as_JSON(filename: String) -> void:
-	# Convert the dictionary to JSON string
-	var file = FileAccess.open(filename, FileAccess.READ)
-	if not file:
-		print("File open error : ", FileAccess.get_open_error())
-		return
-	var saved_graph_data = JSON.parse_string(file.get_as_text())
-	file.close()
-	
+func init_graph_from_JSON(saved_graph_data) -> void:
 	var allGraphNodes = saved_graph_data["graph_nodes"]
 	var version = saved_graph_data["version"]
 	var allConnections = saved_graph_data["connections"]
@@ -88,7 +80,7 @@ func open_and_init_JSON(filename: String):
 	return saved_graph_data
 
 # Recursively iterates through all the array of the JSON
-func load_JSON_recursively(JSON_array, tabs = '', parent_node = '', previous_port = 0):
+func init_graph_from_JSON_recursive(JSON_array, tabs = '', parent_node = '', previous_port = 0):
 	# Get the top level keys of a JSON dict
 	var keys: Array = JSON_array.keys()
 	
@@ -127,11 +119,11 @@ func load_JSON_recursively(JSON_array, tabs = '', parent_node = '', previous_por
 			if(parent_node is not String):
 				connect_node(parent_node.name, previous_port, graph_node.name, 0)
 			
-			load_JSON_recursively(JSON_array[keys[i]], tabs, graph_node, current_port)
+			init_graph_from_JSON_recursive(JSON_array[keys[i]], tabs, graph_node, current_port)
 	else:
 		return
 
-func save_graph_as_JSON(filename: String) -> void:
+func convert_graph_to_JSON_dictionary():
 	var saved_graph_data = {}
 	var allGraphNodes = []
 	
@@ -153,9 +145,11 @@ func save_graph_as_JSON(filename: String) -> void:
 			
 			allGraphNodes.append(GRAPH_NODE_data)
 	saved_graph_data["graph_nodes"] = allGraphNodes
+	return saved_graph_data
 	
+func save_JSON_as_file(JSON_string, filename: String):
 	# Convert the dictionary to JSON string
-	var json_string = JSON.stringify(saved_graph_data, "\t")
+	var json_string = JSON.stringify(JSON_string, "\t")
 	var file = FileAccess.open(filename, FileAccess.WRITE)
 	if not file:
 		print("File open error : ", FileAccess.get_open_error())
@@ -164,6 +158,7 @@ func save_graph_as_JSON(filename: String) -> void:
 	file.close()
 	
 # MAKE THIS MORE REDABLE AND FRINDLY :<
+# WARNING : NEED TO REFACTOR THIS
 func save_graph_as_resource(filename: String) -> void:
 	var graph_data = GraphData.new()
 	graph_data.connections = get_connection_list()
@@ -192,9 +187,13 @@ func load_graph(path: String) -> void:
 	if file_extension == "tres":
 		load_graph_as_resource(path)
 	elif file_extension == "json":
-		var rec_array = open_and_init_JSON(path)
-		load_JSON_recursively(rec_array)
-		# load_graph_as_JSON(path)
+		var saved_graph_data = open_and_init_JSON(path)
+		# Default saving feature embedds version info.
+		if (saved_graph_data as Dictionary).has("version"):
+			init_graph_from_JSON(saved_graph_data)
+		else:
+			init_graph_from_JSON_recursive(saved_graph_data)
+		# init_graph_from_JSON(path)
 	else:
 		print("Invalid file extension!");
 		# Handle invalid file extension error
@@ -204,7 +203,8 @@ func save_graph(path: String) -> void:
 	if file_extension == "tres":
 		save_graph_as_resource(path)
 	elif file_extension == "json":
-		save_graph_as_JSON(path)
+		var graph_data = convert_graph_to_JSON_dictionary()
+		save_JSON_as_file(graph_data, path)
 	else:
 		print("Invalid file extension")
 		# Handle invalid file extension

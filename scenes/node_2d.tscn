@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://du7hqtwwqg5mp" path="res://resources/new_theme_global.tres" id="1_04qyp"]
 [ext_resource type="Script" uid="uid://bfcd5su0eewnd" path="res://scripts/menu_option_manager.gd" id="2_4vge2"]
-[ext_resource type="Script" uid="uid://dslsxad4dj6j4" path="res://scripts/graph_edit.gd" id="3_04qyp"]
+[ext_resource type="PackedScene" uid="uid://cmr7bf7dr53ex" path="res://scenes/graph_edit.tscn" id="3_rnjyy"]
 
 [node name="Control2D" type="Control"]
 layout_mode = 3
@@ -14,10 +14,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_04qyp")
 
-[node name="MenuHandler" type="Node" parent="." node_paths=PackedStringArray("Graph_Edit")]
+[node name="MenuHandler" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_4vge2")
-Graph_Edit = NodePath("../VBoxContainer/GraphEdit")
 
 [node name="SaveFileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
@@ -89,34 +88,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
-clip_contents = false
+[node name="GraphEdit" parent="VBoxContainer" instance=ExtResource("3_rnjyy")]
 layout_mode = 2
-size_flags_vertical = 3
-show_grid = false
-snapping_enabled = false
-right_disconnects = true
-connection_lines_thickness = 2.5
-zoom = 0.8
-minimap_enabled = false
-show_zoom_label = true
-script = ExtResource("3_04qyp")
-
-[node name="Panel" type="Panel" parent="VBoxContainer/GraphEdit"]
-layout_mode = 2
-anchor_top = -0.002
-anchor_right = 1.0
-anchor_bottom = -0.002
-offset_top = 0.226
-offset_bottom = 50.226
 
 [connection signal="file_selected" from="SaveFileDialog" to="MenuHandler" method="_on_save_file_dialog_file_selected"]
 [connection signal="file_selected" from="OpenFileDialog" to="MenuHandler" method="_on_open_file_dialog_file_selected"]
 [connection signal="id_pressed" from="Panel/MenuBar/FileMenuPopup" to="MenuHandler" method="_on_file_menu_popup_id_pressed"]
 [connection signal="id_pressed" from="Panel/MenuBar/OpenMenuPopup" to="MenuHandler" method="_on_open_menu_popup_id_pressed"]
 [connection signal="id_pressed" from="Panel/MenuBar/Create" to="MenuHandler" method="_on_create_id_pressed"]
-[connection signal="connection_request" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_connection_request"]
-[connection signal="delete_nodes_request" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_delete_nodes_request"]
-[connection signal="disconnection_request" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_disconnection_request"]
-[connection signal="node_deselected" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_node_deselected"]
-[connection signal="node_selected" from="VBoxContainer/GraphEdit" to="VBoxContainer/GraphEdit" method="_on_node_selected"]

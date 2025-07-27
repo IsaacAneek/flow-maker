@@ -1,0 +1,100 @@
+{
+	"connections": [
+		{
+			"from_node": "_GraphNode_272",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_graph_node",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_272",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_281",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_272",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_285",
+			"to_port": 1
+		}
+	],
+	"graph_nodes": [
+		{
+			"name": "_GraphNode_272",
+			"offset": "Vector2(429.75, 329)",
+			"sub_nodes": [
+				{
+					"topic": "SLAM"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_281",
+			"offset": "Vector2(817.786, 577.786)",
+			"sub_nodes": [
+				{
+					"topic": "Explore SLAM Variants"
+				},
+				{
+					"topic": "EKF SLAM"
+				},
+				{
+					"topic": "Graoh SLAM"
+				},
+				{
+					"topic": "Visual SLAM"
+				},
+				{
+					"topic": "VIO (VI-SLAM)"
+				}
+			]
+		},
+		{
+			"name": "_graph_node",
+			"offset": "Vector2(819.033, 187.546)",
+			"sub_nodes": [
+				{
+					"topic": "Understand SLAM Fundamentals"
+				},
+				{
+					"topic": "Localization vs Mapping"
+				},
+				{
+					"topic": "Sensor Fusion"
+				},
+				{
+					"topic": "State Estimation"
+				},
+				{
+					"topic": "Loop closure"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_285",
+			"offset": "Vector2(820, -200)",
+			"sub_nodes": [
+				{
+					"topic": "Linear Algebra"
+				},
+				{
+					"topic": "Probability and Statistics"
+				},
+				{
+					"topic": "Calculus and Optimizations"
+				},
+				{
+					"topic": "Geometry"
+				},
+				{
+					"topic": "Python and C++"
+				}
+			]
+		}
+	],
+	"version": "0.3.2.0"
+}

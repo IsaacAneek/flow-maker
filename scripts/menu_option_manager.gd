@@ -1,7 +1,7 @@
 extends Node
 
 var last_selected_path: String = ""
-@export var Graph_Edit: GraphEdit
+@onready var Graph_Edit: GraphEdit = $"../VBoxContainer/GraphEdit"
 @onready var save_file_dialog: FileDialog = $"../SaveFileDialog"
 @onready var open_file_dialog: FileDialog = $"../OpenFileDialog"
 @onready var file_menu_popup: PopupMenu = %FileMenuPopup
@@ -61,10 +61,10 @@ func _on_save_file_dialog_file_selected(path: String) -> void:
 
 func _on_open_file_dialog_file_selected(path: String) -> void:
 	last_selected_path = path
-	#Graph_Edit.clear_connections()
+	# Graph_Edit.clear_connections()
 	Graph_Edit.clear_graph()
 	Graph_Edit.load_graph(path)
-	Graph_Edit.arrange_nodes()
+	# Graph_Edit.arrange_nodes()
 
 func _on_create_id_pressed(id: int) -> void:
 	match(id):

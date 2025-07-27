@@ -1,0 +1,318 @@
+{
+	"connections": [
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_272",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_272",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_276",
+			"to_port": 1
+		},
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_282",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_282",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_286",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_319",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 1,
+			"keep_alive": false,
+			"to_node": "_GraphNode_323",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 1,
+			"keep_alive": false,
+			"to_node": "_GraphNode_319",
+			"to_port": 2
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 2,
+			"keep_alive": false,
+			"to_node": "_GraphNode_316",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 2,
+			"keep_alive": false,
+			"to_node": "_GraphNode_319",
+			"to_port": 2
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 2,
+			"keep_alive": false,
+			"to_node": "_GraphNode_323",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 3,
+			"keep_alive": false,
+			"to_node": "_GraphNode_323",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 4,
+			"keep_alive": false,
+			"to_node": "_GraphNode_323",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 4,
+			"keep_alive": false,
+			"to_node": "_GraphNode_316",
+			"to_port": 2
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 4,
+			"keep_alive": false,
+			"to_node": "_GraphNode_341",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 5,
+			"keep_alive": false,
+			"to_node": "_GraphNode_298",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 5,
+			"keep_alive": false,
+			"to_node": "_GraphNode_316",
+			"to_port": 2
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 6,
+			"keep_alive": false,
+			"to_node": "_GraphNode_298",
+			"to_port": 3
+		},
+		{
+			"from_node": "_GraphNode_286",
+			"from_port": 6,
+			"keep_alive": false,
+			"to_node": "_GraphNode_350",
+			"to_port": 1
+		},
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_372",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_372",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_376",
+			"to_port": 1
+		}
+	],
+	"graph_nodes": [
+		{
+			"name": "_graph_node",
+			"offset": "Vector2(397.25, 250.25)",
+			"sub_nodes": [
+				{
+					"topic": "Multispectral Imaging"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_272",
+			"offset": "Vector2(920, 200)",
+			"sub_nodes": [
+				{
+					"topic": "Spectral Band Usage"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_316",
+			"offset": "Vector2(2120, 380)",
+			"sub_nodes": [
+				{
+					"topic": "Man made objects"
+				},
+				{
+					"topic": "Soil moisture content"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_323",
+			"offset": "Vector2(2120, 200)",
+			"sub_nodes": [
+				{
+					"topic": "Vegetation"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_298",
+			"offset": "Vector2(2120, 760)",
+			"sub_nodes": [
+				{
+					"topic": "Geological features"
+				},
+				{
+					"topic": "Silicates"
+				},
+				{
+					"topic": "Fires"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_341",
+			"offset": "Vector2(2120, 600)",
+			"sub_nodes": [
+				{
+					"topic": "Forest Fire"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_350",
+			"offset": "Vector2(2120, 1040)",
+			"sub_nodes": [
+				{
+					"topic": "Thermal Differences in water current"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_282",
+			"offset": "Vector2(920, 380)",
+			"sub_nodes": [
+				{
+					"topic": "Spectral Bands"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_372",
+			"offset": "Vector2(920, 640)",
+			"sub_nodes": [
+				{
+					"topic": "Applications"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_276",
+			"offset": "Vector2(1400, -140)",
+			"sub_nodes": [
+				{
+					"topic": "True color"
+				},
+				{
+					"topic": "Green-Red-Infrared"
+				},
+				{
+					"topic": "Blue-NIR-MIR"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_286",
+			"offset": "Vector2(1400, 220)",
+			"sub_nodes": [
+				{
+					"topic": "Blue"
+				},
+				{
+					"topic": "Green"
+				},
+				{
+					"topic": "Red"
+				},
+				{
+					"topic": "NIR"
+				},
+				{
+					"topic": "MIR"
+				},
+				{
+					"topic": "FIR"
+				},
+				{
+					"topic": "Thermal Infrared"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_319",
+			"offset": "Vector2(2120, -40)",
+			"sub_nodes": [
+				{
+					"topic": "Atmosphere"
+				},
+				{
+					"topic": "Deep water"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_376",
+			"offset": "Vector2(1400, 800)",
+			"sub_nodes": [
+				{
+					"topic": "Tracking military targets"
+				},
+				{
+					"topic": "Land mine detection"
+				},
+				{
+					"topic": "Ballistic missile detection"
+				},
+				{
+					"topic": "Space based imaging"
+				},
+				{
+					"topic": "Documents and artworks"
+				},
+				{
+					"topic": "FIR"
+				},
+				{
+					"topic": "Precision agriculture"
+				}
+			]
+		}
+	],
+	"version": "0.3.2.0"
+}

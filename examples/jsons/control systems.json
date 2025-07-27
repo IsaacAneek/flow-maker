@@ -1,0 +1,160 @@
+{
+	"connections": [
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_303",
+			"to_port": 1
+		},
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_300",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_300",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_291",
+			"to_port": 1
+		},
+		{
+			"from_node": "_GraphNode_303",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_309",
+			"to_port": 1
+		},
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_313",
+			"to_port": 1
+		},
+		{
+			"from_node": "_graph_node",
+			"from_port": 0,
+			"keep_alive": false,
+			"to_node": "_GraphNode_317",
+			"to_port": 1
+		}
+	],
+	"graph_nodes": [
+		{
+			"name": "_graph_node",
+			"offset": "Vector2(359, 407.564)",
+			"sub_nodes": [
+				{
+					"topic": "Control Theory"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_291",
+			"offset": "Vector2(1340, -400)",
+			"sub_nodes": [
+				{
+					"topic": "Open Loop vs Closed Loop systems"
+				},
+				{
+					"topic": "Feedback and stability"
+				},
+				{
+					"topic": "Transfer functions"
+				},
+				{
+					"topic": "Time-domain and frequncy-domain analysis"
+				},
+				{
+					"topic": "PID controllers"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_300",
+			"offset": "Vector2(820, -20)",
+			"sub_nodes": [
+				{
+					"topic": "Classical Control Theory"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_303",
+			"offset": "Vector2(820, 160)",
+			"sub_nodes": [
+				{
+					"topic": "Modern Control Theory"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_309",
+			"offset": "Vector2(1340, 0)",
+			"sub_nodes": [
+				{
+					"topic": "State-space modeling"
+				},
+				{
+					"topic": "Controllability and observability"
+				},
+				{
+					"topic": "Pole placement and observer design"
+				},
+				{
+					"topic": "Optimal control"
+				},
+				{
+					"topic": "Robust control and H-infinity methods"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_313",
+			"offset": "Vector2(1300, 400)",
+			"sub_nodes": [
+				{
+					"topic": "Hand on Implementation"
+				},
+				{
+					"topic": "Simlate control systems in MATLAB, Simulink"
+				},
+				{
+					"topic": "Temperature control system"
+				},
+				{
+					"topic": "DC motor speed control"
+				},
+				{
+					"topic": "Inverted pendulum stabilization"
+				}
+			]
+		},
+		{
+			"name": "_GraphNode_317",
+			"offset": "Vector2(1300, 800)",
+			"sub_nodes": [
+				{
+					"topic": "Advanced"
+				},
+				{
+					"topic": "Nonlinear Control"
+				},
+				{
+					"topic": "Adaptive Control"
+				},
+				{
+					"topic": "Model predictive control"
+				},
+				{
+					"topic": "Kalman Filters and Estimation theory"
+				}
+			]
+		}
+	],
+	"version": "0.3.2.0"
+}
