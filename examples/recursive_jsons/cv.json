@@ -1,0 +1,363 @@
+{
+  "Computer Vision": {
+    "Foundations": {
+      "Linear Algebra": {
+        "Vectors": {
+          "Dot Product": {},
+          "Cross Product": {},
+          "Vector Norms": {}
+        },
+        "Matrices": {
+          "Matrix Multiplication": {},
+          "Identity and Inverse Matrices": {},
+          "Transpose Operations": {}
+        },
+        "Matrix Operations": {
+          "Determinants": {},
+          "Rank and Null Space": {},
+          "Eigenvalue Decomposition": {}
+        },
+        "Eigenvalues and Eigenvectors": {
+          "Spectral Theorem": {},
+          "Diagonalization": {}
+        }
+      },
+      "Calculus": {
+        "Derivatives": {
+          "Rules of Differentiation": {},
+          "Chain Rule": {}
+        },
+        "Partial Derivatives": {
+          "Jacobian Matrix": {},
+          "Gradient Vector": {}
+        },
+        "Gradient Descent": {
+          "Learning Rate": {},
+          "Local Minima and Maxima": {},
+          "Convergence Criteria": {}
+        }
+      },
+      "Probability and Statistics": {
+        "Distributions": {
+          "Gaussian Distribution": {},
+          "Uniform Distribution": {},
+          "Bernoulli and Binomial": {}
+        },
+        "Bayesian Inference": {
+          "Bayes’ Theorem": {},
+          "Likelihood and Prior": {}
+        },
+        "Expectation and Variance": {
+          "Covariance Matrix": {},
+          "Standard Deviation": {}
+        }
+      },
+      "Programming Fundamentals": {
+        "Python Basics": {
+          "Data Types and Control Structures": {},
+          "Functions and Modules": {},
+          "List Comprehensions": {}
+        },
+        "Numpy for Numerical Computation": {
+          "Array Broadcasting": {},
+          "Vectorized Operations": {},
+          "Indexing and Masking": {}
+        },
+        "Matplotlib and OpenCV Basics": {
+          "Image Visualization": {},
+          "Pixel Manipulation": {},
+          "Interactive Plots": {}
+        }
+      }
+    },
+    "Image Fundamentals": {
+      "Image Representation": {
+        "Pixels and Channels": {
+          "Bit Depth": {},
+          "Alpha Channel": {}
+        },
+        "Color Spaces (RGB, HSV, Grayscale)": {
+          "Conversions": {},
+          "Use-Cases": {}
+        }
+      },
+      "Image Processing": {
+        "Filtering and Convolution": {
+          "Kernel Design": {},
+          "Separable Filters": {},
+          "2D Convolution Mechanics": {}
+        },
+        "Edge Detection": {
+          "Sobel": {
+            "Gradient Calculation": {},
+            "Magnitude and Direction": {}
+          },
+          "Canny": {
+            "Non-Max Suppression": {},
+            "Hysteresis Thresholding": {}
+          }
+        },
+        "Blurring": {
+          "Gaussian Blur": {
+            "Kernel Size Selection": {},
+            "Sigma Control": {}
+          },
+          "Median Filter": {
+            "Noise Reduction": {}
+          }
+        },
+        "Morphological Operations": {
+          "Dilation": {
+            "Structuring Element": {}
+          },
+          "Erosion": {
+            "Boundary Shrinking": {}
+          },
+          "Opening and Closing": {
+            "Noise Removal": {}
+          }
+        },
+        "Histogram Analysis": {
+          "Equalization": {
+            "CLAHE": {}
+          },
+          "Thresholding": {
+            "Otsu’s Method": {},
+            "Adaptive Thresholding": {}
+          }
+        }
+      }
+    },
+    "Feature Extraction and Description": {
+      "Keypoints and Descriptors": {
+        "SIFT": {
+          "Scale-Space Extrema": {},
+          "Orientation Assignment": {},
+          "Descriptor Generation": {}
+        },
+        "SURF": {
+          "Integral Images": {},
+          "Hessian Matrix": {}
+        },
+        "ORB": {
+          "FAST Keypoint Detector": {},
+          "BRIEF Descriptor": {}
+        }
+      },
+      "Template Matching": {
+        "Cross-Correlation": {},
+        "Normalized Matching": {}
+      },
+      "Corner Detection": {
+        "Harris Corner Detector": {
+          "Corner Response Function": {},
+          "Windowing": {}
+        }
+      }
+    },
+    "Camera Geometry and Calibration": {
+      "Pin-hole Camera Model": {
+        "Homogeneous Coordinates": {},
+        "Projection Matrix": {}
+      },
+      "Camera Matrix and Parameters": {
+        "Intrinsic Parameters": {},
+        "Extrinsic Parameters": {}
+      },
+      "Distortion Models": {
+        "Radial Distortion": {},
+        "Tangential Distortion": {}
+      },
+      "Calibration Techniques": {
+        "Checkerboard Calibration": {},
+        "Zhang’s Method": {}
+      }
+    },
+    "Machine Learning for Vision": {
+      "Supervised Learning": {
+        "Image Classification": {
+          "Data Preprocessing": {},
+          "Model Evaluation Metrics": {
+            "Confusion Matrix": {},
+            "Precision/Recall/F1": {}
+          }
+        },
+        "Support Vector Machines": {
+          "Kernel Trick": {},
+          "Hyperplane Optimization": {}
+        },
+        "Object Detection": {
+          "Sliding Window": {},
+          "Non-Max Suppression": {}
+        }
+      },
+      "Unsupervised Learning": {
+        "Clustering for Segmentation": {
+          "K-Means": {
+            "Initialization Techniques": {},
+            "Inertia Score": {}
+          },
+          "Mean-Shift": {
+            "Bandwidth Selection": {}
+          }
+        }
+      },
+      "Dimensionality Reduction": {
+        "PCA": {
+          "Covariance Matrix": {},
+          "Eigenfaces": {}
+        },
+        "t-SNE": {
+          "Distance Metrics": {},
+          "Perplexity Parameter": {}
+        }
+      }
+    },
+    "Deep Learning": {
+      "Neural Networks Basics": {
+        "Forward Propagation": {
+          "Weight Matrix Multiplication": {},
+          "Activation Evaluation": {}
+        },
+        "Backward Propagation": {
+          "Error Gradients": {},
+          "Weight Update Mechanism": {}
+        },
+        "Activation Functions": {
+          "ReLU": {},
+          "Sigmoid": {},
+          "Softmax": {}
+        }
+      },
+      "Convolutional Neural Networks (CNNs)": {
+        "Convolution Layers": {
+          "Filter Initialization": {},
+          "Stride and Padding": {}
+        },
+        "Pooling Layers": {
+          "Max Pooling": {},
+          "Average Pooling": {}
+        },
+        "Fully Connected Layers": {
+          "Flattening Feature Maps": {},
+          "Classification Output": {}
+        },
+        "Architectures": {
+          "LeNet": {
+            "Simple Digit Classification": {}
+          },
+          "AlexNet": {
+            "Large-Scale Classification": {}
+          },
+          "VGG": {
+            "Deep Stacked Layers": {}
+          },
+          "ResNet": {
+            "Skip Connections": {},
+            "Vanishing Gradient Mitigation": {}
+          }
+        }
+      },
+      "Object Detection and Segmentation": {
+        "R-CNN Family": {
+          "Region Proposals": {},
+          "RoI Pooling": {}
+        },
+        "YOLO": {
+          "Grid-based Detection": {},
+          "Bounding Box Regression": {}
+        },
+        "Mask R-CNN": {
+          "Segmentation Masks": {},
+          "Multi-task Loss": {}
+        }
+      }
+    },
+    "Advanced Topics": {
+      "Optical Flow": {
+        "Lucas-Kanade": {
+          "Window-based Matching": {},
+          "Assumptions and Limitations": {}
+        },
+        "Horn-Schunck": {
+          "Global Minimization": {},
+          "Smoothness Constraint": {}
+        }
+      },
+      "Visual SLAM": {
+        "Feature-based SLAM": {
+          "Loop Closure": {},
+          "Pose Graph Optimization": {}
+        },
+        "Direct SLAM": {
+          "Photometric Error Minimization": {}
+        }
+      },
+      "3D Reconstruction": {
+        "Stereo Vision": {
+          "Epipolar Geometry": {},
+          "Disparity Maps": {}
+        },
+        "Depth Estimation": {
+          "Monocular Depth": {},
+          "Point Cloud Generation": {}
+        }
+      }
+    },
+    "Tools and Frameworks": {
+      "OpenCV": {
+        "Image Processing": {
+          "Filtering Functions": {},
+          "Morphological Operators": {}
+        },
+        "Drawing and Annotation": {
+          "Lines, Circles, Text": {},
+          "Overlay Transparency": {}
+        },
+        "Camera I/O": {
+          "VideoCapture": {},
+          "Frame Reading and Display": {}
+        }
+      },
+      "TensorFlow": {
+        "Model Training": {
+          "Callbacks": {},
+          "Dataset Preparation": {}
+        },
+        "TensorBoard": {
+          "Visualization Setup": {},
+          "Metric Tracking": {}
+        }
+      },
+      "PyTorch": {
+        "Torchvision": {
+          "Pretrained Models": {},
+          "Transforms": {}
+        },
+        "Autograd and Custom Models": {
+          "Custom NN Layers": {},
+          "Manual Gradient Control": {}
+        }
+      }
+    },
+    "Project Ideas": {
+      "Real-time Object Detection": {
+        "YOLOv5 on Webcam": {},
+        "FPS Optimization": {}
+      },
+      "Gesture Recognition System": {
+        "Hand Landmark Detection": {},
+        "Gesture Classification": {}
+      },
+      "Face Recognition Pipeline": {
+        "Face Embeddings": {},
+        "Recognition via Euclidean Distance": {}
+      },
+      "Image Style Transfer": {
+        "Content Loss": {},
+        "Style Loss": {},
+        "Gram Matrix": {}
+      }
+    }
+  }
+}

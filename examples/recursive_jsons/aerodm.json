@@ -1,0 +1,208 @@
+{
+  "Aerodynamics": {
+	"Fundamentals": {
+	  "Fluid Mechanics": {
+		"Properties of Fluids": {
+		  "Density": {
+			"Definition": {},
+			"Effect on Lift": {}
+		  },
+		  "Viscosity": {
+			"Kinematic vs Dynamic": {},
+			"Role in Boundary Layer": {}
+		  },
+		  "Compressibility": {
+			"Compressible vs Incompressible Flow": {},
+			"Impact on Shock Waves": {}
+		  }
+		},
+		"Types of Flow": {
+		  "Laminar Flow": {
+			"Characteristics": {},
+			"Reynolds Number Dependency": {}
+		  },
+		  "Turbulent Flow": {
+			"Transition Criteria": {},
+			"Vortex Formation": {}
+		  },
+		  "Steady and Unsteady Flow": {
+			"Temporal Behavior": {},
+			"Examples": {}
+		  }
+		}
+	  },
+	  "Governing Equations": {
+		"Conservation Laws": {
+		  "Continuity Equation": {
+			"Mass Conservation": {},
+			"Control Volume Analysis": {}
+		  },
+		  "Navier-Stokes Equations": {
+			"Momentum Conservation": {
+			  "Viscous Term": {},
+			  "Inertial Term": {}
+			},
+			"Solution Methods": {
+			  "Analytical": {},
+			  "Numerical (CFD)": {}
+			}
+		  },
+		  "Energy Equation": {
+			"First Law of Thermodynamics": {},
+			"Heat Transfer in Flow": {}
+		  }
+		}
+	  }
+	},
+	"Force Analysis": {
+	  "Pressure and Surface Interaction": {
+		"Static Pressure": {
+		  "Bernoulli’s Principle": {
+			"Flow Speed vs Pressure": {},
+			"Venturi Effect": {}
+		  }
+		},
+		"Dynamic Pressure": {
+		  "Definition": {},
+		  "Measurement Using Pitot Tubes": {}
+		}
+	  },
+	  "Lift Generation": {
+		"Airfoil Mechanics": {
+		  "Angle of Attack": {
+			"Lift Curve": {},
+			"Critical Angle": {}
+		  },
+		  "Camber and Thickness": {
+			"Effect on Pressure Distribution": {},
+			"Optimization": {}
+		  }
+		},
+		"Circulation Theory": {
+		  "Kutta Condition": {},
+		  "Kutta-Joukowski Theorem": {
+			"Lift Equation": {},
+			"Physical Interpretation": {}
+		  }
+		}
+	  },
+	  "Drag Forces": {
+		"Parasite Drag": {
+		  "Form Drag": {
+			"Shape Dependence": {},
+			"Flow Separation": {}
+		  },
+		  "Skin Friction": {
+			"Surface Roughness": {},
+			"Laminar vs Turbulent": {}
+		  }
+		},
+		"Induced Drag": {
+		  "Vortex Shedding": {},
+		  "Wingtip Effects": {}
+		},
+		"Wave Drag": {
+		  "Supersonic Effects": {},
+		  "Shock Wave Interactions": {}
+		}
+	  }
+	},
+	"Advanced Flow Behavior": {
+	  "Compressible Flow": {
+		"Mach Number": {
+		  "Flow Regimes": {
+			"Subsonic": {},
+			"Transonic": {},
+			"Supersonic": {},
+			"Hypersonic": {}
+		  },
+		  "Applications in Aircraft": {}
+		},
+		"Shock Waves": {
+		  "Normal Shock": {
+			"Pressure Change": {},
+			"Temperature Change": {}
+		  },
+		  "Oblique Shock": {
+			"Shock Angle": {},
+			"Deflection Angle": {}
+		  },
+		  "Expansion Waves": {
+			"Prandtl–Meyer Expansion": {},
+			"Flow Acceleration": {}
+		  }
+		}
+	  },
+	  "Boundary Layer Theory": {
+		"Laminar Boundary Layer": {
+		  "Growth Over Flat Plate": {},
+		  "Analytical Models": {}
+		},
+		"Turbulent Boundary Layer": {
+		  "Reynolds Averaging": {},
+		  "Wall Shear Stress": {}
+		},
+		"Separation Point": {
+		  "Adverse Pressure Gradient": {},
+		  "Control Techniques": {}
+		}
+	  }
+	},
+	"Design and Application": {
+	  "Airfoil Design": {
+		"Shape Parameters": {
+		  "NACA Profiles": {},
+		  "Custom Airfoil Generation": {}
+		},
+		"Performance Curves": {
+		  "Lift-to-Drag Ratio": {},
+		  "Stall Characteristics": {}
+		}
+	  },
+	  "Wing Configuration": {
+		"Aspect Ratio": {
+		  "High vs Low AR": {},
+		  "Efficiency Trade-offs": {}
+		},
+		"Sweep and Dihedral": {
+		  "Stability Contributions": {},
+		  "Control Surface Impacts": {}
+		}
+	  },
+	  "Aircraft Performance": {
+		"Thrust-to-Weight Ratio": {},
+		"Drag Polar": {},
+		"Flight Envelope": {}
+	  }
+	},
+	"Experimental and Computational Methods": {
+	  "Wind Tunnel Testing": {
+		"Setup": {
+		  "Scale Modeling": {},
+		  "Instrumentation": {}
+		},
+		"Visualization": {
+		  "Smoke and Dye": {},
+		  "Schlieren Photography": {}
+		}
+	  },
+	  "CFD (Computational Fluid Dynamics)": {
+		"Meshing": {
+		  "Structured vs Unstructured Grid": {},
+		  "Mesh Refinement": {}
+		},
+		"Numerical Solvers": {
+		  "Finite Volume Method": {},
+		  "Turbulence Models": {
+			"RANS": {},
+			"LES": {}
+		  }
+		},
+		"Post-Processing": {
+		  "Flow Vectors": {},
+		  "Pressure Contours": {}
+		}
+	  }
+	}
+  }
+}
