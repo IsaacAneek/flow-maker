@@ -1,0 +1,62 @@
+{
+	"Covariance": {
+		"Variance": {
+			"Mean": {},
+			"Expected Value": {
+				"Probability Theory": {},
+				"Summation": {}
+			}
+		},
+		"Joint Probability": {
+			"Random Variables": {
+				"Discrete Variables": {},
+				"Continuous Variables": {}
+			},
+			"Marginal Distribution": {}
+		},
+		"Linear Algebra": {
+			"Vectors": {},
+			"Matrix Multiplication": {},
+			"Covariance Matrix": {}
+		},
+		"Statistics": {
+			"Descriptive Statistics": {},
+			"Correlation": {}
+		}
+	},
+
+	"Gaussian Distribution": {
+		"Univariate Gaussian": {
+			"Mean": {},
+			"Standard Deviation": {},
+			"Probability Density Function": {},
+			"Bell Curve Geometry": {}
+		},
+		"Multivariate Gaussian": {
+			"Covariance Matrix": {},
+			"Mean Vector": {},
+			"Linear Algebra": {
+				"Eigenvectors": {},
+				"Eigenvalues": {}
+			},
+			"Matrix Decomposition": {}
+		},
+		"Probability Theory": {
+			"Bayes Theorem": {},
+			"Marginalization": {},
+			"Conditional Probability": {}
+		},
+		"Calculus": {
+			"Integration": {
+				"Area under Curve": {},
+				"Definite & Indefinite Integrals": {}
+			},
+			"Multivariable Calculus": {}
+		},
+		"Advanced Topics": {
+			"Central Limit Theorem": {},
+			"Maximum Likelihood Estimation": {},
+			"Expectation-Maximization": {}
+		}
+	}
+}

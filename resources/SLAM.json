@@ -1,0 +1,92 @@
+{
+  "SLAM (Simultaneous Localization and Mapping)": {
+	"Foundations": {
+	  "Linear Algebra": {
+		"Vectors": {},
+		"Matrices": {},
+		"Matrix Operations": {},
+		"Eigenvalues and Eigenvectors": {}
+	  },
+	  "Probability and Statistics": {
+		"Probability Theory": {},
+		"Bayesian Inference": {},
+		"Gaussian Distribution": {},
+		"Covariance and Correlation": {}
+	  },
+	  "Calculus": {
+		"Differentiation": {},
+		"Integration": {},
+		"Multivariable Calculus": {}
+	  },
+	  "Algorithms": {
+		"Search Algorithms": {},
+		"Optimization": {},
+		"Graph Theory": {}
+	  }
+	},
+
+	"Sensor Technologies": {
+	  "IMU (Inertial Measurement Unit)": {
+		"Accelerometers": {},
+		"Gyroscopes": {}
+	  },
+	  "Camera Systems": {
+		"Monocular Cameras": {},
+		"Stereo Cameras": {},
+		"RGB-D Cameras": {}
+	  },
+	  "LiDAR": {},
+	  "Ultrasound / Sonar": {}
+	},
+
+	"Localization Techniques": {
+	  "Odometry": {
+		"Wheel Odometry": {},
+		"Visual Odometry": {}
+	  },
+	  "Sensor Fusion": {
+		"Kalman Filter": {},
+		"Extended Kalman Filter": {},
+		"Mahony Filter": {},
+		"Complementary Filter": {}
+	  },
+	  "Coordinate Frames and Transformations": {}
+	},
+
+	"Mapping Techniques": {
+	  "Occupancy Grid Maps": {},
+	  "Feature Extraction": {},
+	  "Point Cloud Processing": {},
+	  "Graph-Based Mapping": {}
+	},
+
+	"SLAM Variants": {
+	  "EKF-SLAM (Extended Kalman Filter SLAM)": {},
+	  "FastSLAM": {},
+	  "Graph SLAM": {},
+	  "Visual SLAM": {
+		"ORB-SLAM": {},
+		"LSD-SLAM": {}
+	  }
+	},
+
+	"Practical Tools and Frameworks": {
+	  "ROS (Robot Operating System)": {
+		"TF and tf2": {},
+		"SLAM Packages (GMapping, Cartographer, etc.)": {}
+	  },
+	  "SLAM Libraries": {
+		"RTAB-Map": {},
+		"OpenVSLAM": {},
+		"Karto": {}
+	  }
+	},
+
+	"Applications": {
+	  "Mobile Robotics": {},
+	  "AR/VR": {},
+	  "Autonomous Vehicles": {},
+	  "Drones and UAVs": {}
+	}
+  }
+}

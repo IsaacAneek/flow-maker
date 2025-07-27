@@ -78,6 +78,58 @@ func load_graph_as_JSON(filename: String) -> void:
 		print(connection)
 		connect_node(connection.from_node, connection.from_port, connection.to_node, connection.to_port)
 
+func open_and_init_JSON(filename: String):
+	var file = FileAccess.open(filename, FileAccess.READ)
+	if not file:
+		print("File open error : ", FileAccess.get_open_error())
+		return 0
+	var saved_graph_data = JSON.parse_string(file.get_as_text())
+	file.close()
+	return saved_graph_data
+
+# Recursively iterates through all the array of the JSON
+func load_JSON_recursively(JSON_array, tabs = '', parent_node = '', previous_port = 0):
+	# Get the top level keys of a JSON dict
+	var keys: Array = JSON_array.keys()
+	
+	# Since we are assuming this is a nested dictionary,
+	# valid topics and sub topics have a non-zero key size.
+	# Which also means we have reached the deepest level of our nesting
+	# when the key size of a sub topic is zero. Which can act as a base case
+	# for our recursive call
+	
+	# Check base case
+	if keys.size() != 0:
+		tabs += '\t'
+		
+		# For each topic in the dictinary create a node
+		var graph_node = GRAPH_NODE.instantiate() as GraphNode
+		var slotIndex = 1
+		add_child(graph_node)
+		graph_node.name = keys[0]
+		
+		for i in range(keys.size()):
+			print(tabs + keys[i])
+			
+			var current_port = i
+			
+			# For each topic/node create a sub node for sub topics
+			# and add as a child to the node
+			var s_node = SUBNODE_H_BOX_CONTAINER.instantiate()
+			s_node.get_child(0).text = keys[i]
+			graph_node.set_slot(slotIndex, true, 0, Color(1, 1, 1, 1), true, 0, Color(1, 1, 1, 1))
+			slotIndex += 1
+			graph_node.add_child(s_node)
+			
+			# I kept the default value of parent node as ''
+			# This essentialy checks if a parent node has been passed
+			# from the previous recursive call
+			if(parent_node is not String):
+				connect_node(parent_node.name, previous_port, graph_node.name, 0)
+			
+			load_JSON_recursively(JSON_array[keys[i]], tabs, graph_node, current_port)
+	else:
+		return
 
 func save_graph_as_JSON(filename: String) -> void:
 	var saved_graph_data = {}
@@ -140,7 +192,9 @@ func load_graph(path: String) -> void:
 	if file_extension == "tres":
 		load_graph_as_resource(path)
 	elif file_extension == "json":
-		load_graph_as_JSON(path)
+		var rec_array = open_and_init_JSON(path)
+		load_JSON_recursively(rec_array)
+		# load_graph_as_JSON(path)
 	else:
 		print("Invalid file extension!");
 		# Handle invalid file extension error
